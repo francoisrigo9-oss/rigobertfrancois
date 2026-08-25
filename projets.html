@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <title>Mes Projets - Rigobert Francois</title>
     <style>
-        body{font-family:Arial;padding: 50px;background: #f5f5f5; }
-        .container{background: white;padding: 40px;border-radius: 15px;max-width: 800px;margin:auto;box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h1{color: #0366d6;text-align:center; }
-        .projet{border-left: 4px solid #0366d6;padding-left:15px;margin:20px 0; }
-        .retour{display:block;text-align:center;margin-top:30px;color:#0366d6;text-decoration:none; }
+        body{font-family:Arial;text-align:center;padding: 20px;background: #f4f4f4; }
+        .container{max-width: 900px;margin:auto; }
+        h1{color: #667eea; }
+        .projet{background: white;padding: 20px;margin: 20px;border-radius: 10px;box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .projet img{width: 100%;max-width: 400px;border-radius: 8px;margin: 10px 0; }
+        .btn{background: #667eea;color:white;padding: 10px 20px;text-decoration:none;border-radius: 5px;display:inline-block; }
+        .btn:hover{background: #764ba2; }
+        .retour{margin-top: 30px;display:block; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Mes Projets</h1>
-        
+        <h1>💼 Mes Projets</h1>
+        <p>Voici quelques projets que j'ai réalisés</p>
+
         <div class="projet">
-            <h3>1. Site Portfolio</h3>
-            <p>Mon site personnel en HTML/CSS. C'est celui-ci !</p>
+            <h2>1. Site Vitrine Restaurant</h2>
+            <img src="https://via.placeholder.com/400x250.png?text=Site+Restaurant" alt="Projet Restaurant">
+            <p>Un site moderne et responsive pour un restaurant. 
+            <br>Technologies : <b>HTML5, CSS3</b></p>
+            <a href="#" class="btn">Voir le Projet</a>
         </div>
 
         <div class="projet">
-            <h3>2. Page de Contact</h3>
-            <p>Page avec Email, WhatsApp et Facebook.</p>
+            <h2>2. Calculatrice JavaScript</h2>
+            <img src="https://via.placeholder.com/400x250.png?text=Calculatrice+JS" alt="Projet Calculatrice">
+            <p>Une calculatrice fonctionnelle faite avec JavaScript.
+            <br>Technologies : <b>HTML5, CSS3, JavaScript</b></p>
+            <a href="#" class="btn">Voir le Projet</a>
         </div>
 
-        <div class="projet">
-            <h3>3. Prochains projets</h3>
-            <p>Je suis en train d'apprendre. Bientôt de nouveaux projets !</p>
-        </div>
-
-        <a href="index.html" class="retour">← Retour Accueil</a>
+        <a href="index.html" class="btn retour">⬅️ Retour à l'accueil</a>
     </div>
 </body>
 </html>
