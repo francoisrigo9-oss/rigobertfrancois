@@ -2,24 +2,38 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>À propos - Rigobert Francois</title>
+    <title>À Propos - Rigobert Francois</title>
     <style>
-        body { font-family: Arial; max-width: 800px; margin: 40px auto; padding: 20px; }
-        a { color: #0366d6; text-decoration: none; margin-right: 15px; }
+        body{font-family:Arial;padding:20px;background:#f4f4f4;margin:0;text-align:center;}
+        .container{max-width:800px;margin:auto;background:white;padding:30px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+        h1{color:#667eea;}
+        .skills{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:20px 0;}
+        .skill{background:#667eea;color:white;padding:8px 15px;border-radius:20px;font-size:14px;}
+        .btn{background:#25D366;color:white;padding:12px 25px;text-decoration:none;border-radius:5px;display:inline-block;margin-top:20px;font-weight:bold;}
     </style>
 </head>
 <body>
-    <a href="index.html">Accueil</a>
-    <a href="projets.html">Projets</a>
-    <a href="contact.html">Contact</a>
-    
-    <h1>À propos de moi</h1>
-    <p>Salut ! Je m'appelle Rigobert Francois.</p>
-    <p>Je suis étudiant et j'apprends le développement web.</p>
-    <p>Mon objectif : créer des sites web utiles et apprendre chaque jour.</p>
-    
-    <footer style="margin-top: 50px; border-top: 1px solid #ddd; padding-top: 20px;">
-        © 2026 Rigobert Francois
-    </footer>
+    <div class="container">
+        <h1>👨‍💻 À propos de Rigobert Francois</h1>
+        <p><b>Développeur Web & Spécialiste Marketing Digital</b></p>
+        
+        <p>Je crée des sites web modernes et des stratégies digitales qui aident les entreprises au Burundi à vendre plus et à avoir plus de visibilité en ligne.</p>
+        
+        <p>Mon objectif : Transformer vos idées en sites web professionnels qui attirent des clients et génèrent des résultats concrets.</p>
+
+        <h2>💼 Mes Compétences</h2>
+        <div class="skills">
+            <div class="skill">HTML5 & CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Création de Sites</div>
+            <div class="skill">Canva & Photoshop</div>
+            <div class="skill">Marketing Digital</div>
+            <div class="skill">Gestion Réseaux Sociaux</div>
+        </div>
+
+        <a href="contact.html" class="btn">📞 Travaillons Ensemble</a>
+        <br><br>
+        <a href="index.html">⬅️ Retour à l'accueil</a>
+    </div>
 </body>
 </html>
