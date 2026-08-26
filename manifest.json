@@ -1,15 +1,12 @@
 {
-  "short_name": "Rigobert",
-  "name": "Rigobert Francois - Développeur Web",
-  "description": "Portfolio professionnel de Rigobert Francois, Développeur Web à Bujumbura.",
-  "categories": ["business", "developer", "utilities"],
-  "start_url": "/rigobertfrancois/",
+  "name": "Rigobert Francois - Portfolio",
+  "short_name": "Rigobert Portfolio",
+  "description": "Portfolio professionnel de Rigobert Francois",
+  "start_url": "./index.html",
   "display": "standalone",
+  "background_color": "#f4f6f9",
+  "theme_color": "#0366d6",
   "orientation": "portrait",
-  "background_color": "#ffffff",
-  "theme_color": "#007bff",
-  "lang": "fr",
-  "dir": "ltr",
   "icons": [
     {
       "src": "francois.jpg",
@@ -18,7 +15,7 @@
     },
     {
       "src": "francois.jpg",
-      "sizes": "512x512", 
+      "sizes": "512x512",
       "type": "image/jpeg"
     }
   ]
