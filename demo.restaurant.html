@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet - Restaurant Bujumbura Food</title>
+  
+  <!-- CONFIGURATION APPLICATION MOBILE (PWA) -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="francois.jpg.jpeg">
+  <meta name="theme-color" content="#d62828">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- STYLE GRAPHISME FORMAT APPLICATION MOBILE -->
+  <style>
+    * { box-sizing: border-box; }
+    
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+      background-color: #f4f6f9; 
+      color: #333333;
+      padding: 20px 15px; 
+      margin: 0; 
+    }
+    
+    /* Fenêtre principale style application iPhone */
+    .app-container { 
+      background: #ffffff; 
+      max-width: 420px; 
+      margin: 0 auto; 
+      padding: 25px 20px; 
+      border-radius: 20px; 
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
+      text-align: left;
+    }
+    
+    h1 { 
+      color: #d62828; 
+      font-size: 22px; 
+      margin-top: 0;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    
+    .project-intro {
+      font-size: 13.5px;
+      color: #555555;
+      line-height: 1.5;
+      background: #fff5f5;
+      padding: 12px;
+      border-left: 4px solid #d62828;
+      border-radius: 6px;
+      margin-bottom: 25px;
+    }
+    
+    h2 { 
+      color: #0366d6; 
+      font-size: 16px; 
+      margin: 25px 0 10px 0;
+      border-bottom: 2px solid #e3e8ee; 
+      padding-bottom: 5px; 
+    }
+    
+    /* Affichage propre des captures d'écran du restaurant */
+    .photo { 
+      width: 100%; 
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px; 
+      margin: 5px 0 10px 0; 
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    }
+    
+    p {
+      font-size: 13.5px;
+      color: #666666;
+      line-height: 1.5;
+      margin: 0 0 15px 0;
+    }
+    
+    /* Grand bouton retour ergonomique pour le pouce */
+    .btn-back { 
+      display: block; 
+      text-align: center;
+      margin-top: 35px; 
+      padding: 15px; 
+      background: #0366d6; 
+      color: #ffffff; 
+      text-decoration: none; 
+      border-radius: 10px; 
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(3, 102, 214, 0.2);
+    }
+    
+    .btn-back:active { 
+      background: #024a9e; 
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <h1>🍽️ Restaurant Bujumbura Food</h1>
+    
+    <div class="project-intro">
+      <b>Détails du Projet :</b> Développement d'un système web de restauration optimisé pour la ville de Bujumbura. Inclut la présentation des salles, une carte numérique fluide et un parcours d'achat sans frais de commission relié directement à WhatsApp.
+    </div>
+    
+    <h2>1. Page d'Accueil Mobile</h2>
+    <!-- Utilisation de la première image envoyée (Salle moderne) -->
+    <img src="image_G96FuP.png" class="photo" alt="Accueil Restaurant Moderne">
+    <p>Une interface claire qui met en valeur l'ambiance haut de gamme du restaurant. Les clients accèdent immédiatement aux horaires d'ouverture et à la localisation.</p>
+
+    <h2>2. Menu Digital Interactif</h2>
+    <!-- Utilisation de la deuxième image envoyée (Grand espace café) -->
+    <img src="image_kQzEV5.png" class="photo" alt="Menu et Espace Client">
+    <p>Affichage adaptatif de la carte des plats et boissons. Ce format élimine le besoin de menus imprimés traditionnels et s'ajuste parfaitement aux écrans tactiles.</p>
+
+    <h2>3. Commande et Paiement Direct</h2>
+    <!-- Utilisation de la troisième image envoyée (Caisse et tablette tactile) -->
+    <img src="image_XZJDqF.png" class="photo" alt="Caisse et validation de commande">
+    <p>Le client valide ses choix depuis son téléphone. Un résumé structuré de la commande génère instantanément un message exploitable vers le compte WhatsApp de la caisse.</p>
+
+    <!-- BOUTON DE RETOUR INTERNE -->
+    <a href="index.html" class="btn-back">⬅️ Retour au Portfolio</a>
+    
+  </div>
+
+</body>
+</html>
