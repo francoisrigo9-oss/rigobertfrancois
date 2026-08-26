@@ -1,25 +1,22 @@
-const CACHE_NAME = "rigobert-app-v1";
-const FILES_TO_CACHE = [
-  "/rigobertfrancois/",
-  "/rigobertfrancois/index.html",
-  "/rigobertfrancois/projets.html",
-  "/rigobertfrancois/contact.html",
-  "/rigobertfrancois/apropos.html",
-  "/rigobertfrancois/actualite.html",
-  "/rigobertfrancois/francois.jpg.jpeg",
-  "/rigobertfrancois/manifest.json"
+const CACHE_NAME = 'rigobert-portfolio-v1';
+const assets = [
+  './',
+  './index.html',
+  './manifest.json'
 ];
 
-// Installer et mettre en cache
-self.addEventListener("install", (e) => {
+self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(FILES_TO_CACHE))
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(assets);
+    })
   );
 });
 
-// Servir depuis le cache si pas internet
-self.addEventListener("fetch", (e) => {
+self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then((response) => response || fetch(e.request))
+    caches.match(e.request).then((response) => {
+      return response || fetch(e.request);
+    })
   );
 });
