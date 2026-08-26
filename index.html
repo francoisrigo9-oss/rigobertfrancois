@@ -3,50 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0366d6">
-  <title>Rigobert Francois - Portfolio</title>
-  
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="francois.jpg.jpeg">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Rigobert">
-
+  <title>Rigobert Francois</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    body { background: #f5f5f5; color: #333; text-align: center; padding: 40px 20px; }
-    .container { max-width: 400px; margin: 0 auto; background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-    .profile-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #0366d6; margin-bottom: 15px; }
-    h1 { font-size: 24px; color: #0366d6; margin-bottom: 5px; }
-    p { color: #666; margin-bottom: 25px; }
-    .btn { display: block; width: 100%; padding: 15px; margin: 10px 0; background: #0366d6; color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 16px; transition: 0.3s; }
-    .btn:hover { background: #024a9e; transform: translateY(-2px); }
-    .footer { margin-top: 30px; font-size: 12px; color: #999; }
+    body { font-family: Arial; background: #f0f0f0; text-align: center; padding: 50px 20px; margin: 0; }
+    .card { background: white; max-width: 350px; margin: auto; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #0366d6; }
+    h1 { color: #0366d6; font-size: 22px; margin: 10px 0 5px 0; }
+    p { color: #666; margin-bottom: 20px; }
+    .btn { display: block; background: #0366d6; color: white; padding: 14px; margin: 10px 0; text-decoration: none; border-radius: 8px; font-weight: bold; }
+    .btn:active { background: #024a9e; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="francois.jpg.jpeg" alt="Rigobert Francois" class="profile-img">
+  <div class="card">
+    <img src="francois.jpg.jpeg" alt="Rigobert">
     <h1>RIGOBERT FRANCOIS</h1>
     <p>Développeur Web à Bujumbura</p>
-
-    <a href="projets.html" class="btn">Mes Projets</a>
-    <a href="contact.html" class="btn">Me Contacter</a>
-    <a href="apropos.html" class="btn">À Propos</a>
-    <a href="actualite.html" class="btn">Actualité</a>
-
-    <div class="footer">© 2026 Rigobert Francois</div>
+    
+    <a href="#" class="btn">Mes Projets</a>
+    <a href="https://wa.me/257XXXXXXXX" class="btn">Me Contacter WhatsApp</a>
+    <a href="#" class="btn">À Propos</a>
+    <a href="#" class="btn">Actualité</a>
   </div>
-
-  <!-- SERVICE WORKER POUR MARCHER SANS INTERNET -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/rigobertfrancois/sw.js')
-          .then(() => console.log('Service Worker OK'))
-          .catch(err => console.log('Erreur SW:', err));
-      });
-    }
-  </script>
-</
+</body>
+</html>
