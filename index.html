@@ -4,14 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rigobert Francois</title>
+  
+  <!-- CONFIGURATION APPLICATION (PWA) -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0366d6">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
   <style>
     body { font-family: Arial; background: #f0f0f0; text-align: center; padding: 50px 20px; margin: 0; }
     .card { background: white; max-width: 350px; margin: auto; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #0366d6; }
+    img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #0366d6; object-fit: cover; }
     h1 { color: #0366d6; font-size: 22px; margin: 10px 0 5px 0; }
     p { color: #666; margin-bottom: 20px; }
     .btn { display: block; background: #0366d6; color: white; padding: 14px; margin: 10px 0; text-decoration: none; border-radius: 8px; font-weight: bold; }
     .btn:active { background: #024a9e; }
+    
+    /* Bouton d'installation secret (caché par défaut) */
+    #btnInstall { display: none; background: #28a745; color: white; border: none; width: 100%; font-size: 16px; cursor: pointer; }
+    #btnInstall:active { background: #1e7e34; }
   </style>
 </head>
 <body>
@@ -20,10 +31,52 @@
     <h1>RIGOBERT FRANCOIS</h1>
     <p>Développeur Web à Bujumbura</p>
     
+    <!-- Bouton dynamique d'installation -->
+    <button id="btnInstall" class="btn">Installer l'Application</button>
+    
     <a href="#" class="btn">Mes Projets</a>
     <a href="https://wa.me/243971984160" class="btn">Me Contacter WhatsApp</a>
     <a href="#" class="btn">À Propos</a>
     <a href="#" class="btn">Actualité</a>
   </div>
+
+  <!-- INJECTION DU SCRIPT APPLICATION -->
+  <script>
+    // 1. Enregistrement du Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('Service Worker actif !'))
+          .catch(err => console.log('Erreur Service Worker', err));
+      });
+    }
+
+    // 2. Gestion du bouton d'installation
+    let deferredPrompt;
+    const btnInstall = document.getElementById('btnInstall');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      // On affiche le bouton d'installation car l'appareil est compatible
+      btnInstall.style.display = 'block';
+    });
+
+    btnInstall.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          btnInstall.style.display = 'none';
+        }
+        deferredPrompt = null;
+      }
+    });
+
+    window.addEventListener('appinstalled', () => {
+      btnInstall.style.display = 'none';
+      console.log('Application installée avec succès !');
+    });
+  </script>
 </body>
 </html>
