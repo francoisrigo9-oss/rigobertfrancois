@@ -12,3 +12,17 @@
   "categories": ["portfolio", "business", "developer"],
   "lang": "fr",
   "icons": [
+    {
+      "src": "francois.jpg.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "francois.jpg.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
