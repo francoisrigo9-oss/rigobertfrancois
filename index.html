@@ -3,80 +3,254 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rigobert Francois</title>
+  <title>Rigobert Francois - Portfolio Professionnel</title>
   
-  <!-- CONFIGURATION APPLICATION (PWA) -->
+  <!-- ========================================== -->
+  <!-- CONFIGURATION APPLICATION MOBILE (PWA)       -->
+  <!-- ========================================== -->
   <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="francois.png">
   <meta name="theme-color" content="#0366d6">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   
+  <!-- ========================================== -->
+  <!-- STYLE GRAPHIQUE (DESIGN DE L'APPLICATION)  -->
+  <!-- ========================================== -->
   <style>
-    body { font-family: Arial; background: #f0f0f0; text-align: center; padding: 50px 20px; margin: 0; }
-    .card { background: white; max-width: 350px; margin: auto; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #0366d6; object-fit: cover; }
-    h1 { color: #0366d6; font-size: 22px; margin: 10px 0 5px 0; }
-    p { color: #666; margin-bottom: 20px; }
-    .btn { display: block; background: #0366d6; color: white; padding: 14px; margin: 10px 0; text-decoration: none; border-radius: 8px; font-weight: bold; }
-    .btn:active { background: #024a9e; }
+    /* Réinitialisation de base */
+    * { box-sizing: border-box; }
     
-    /* Bouton d'installation secret (caché par défaut) */
-    #btnInstall { display: none; background: #28a745; color: white; border: none; width: 100%; font-size: 16px; cursor: pointer; }
-    #btnInstall:active { background: #1e7e34; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+      background-color: #f4f6f9; 
+      color: #333333;
+      text-align: center; 
+      padding: 25px 15px; 
+      margin: 0; 
+    }
+    
+    /* Conteneur principal de type application mobile */
+    .app-container { 
+      background: #ffffff; 
+      max-width: 420px; 
+      margin: 0 auto; 
+      padding: 30px 20px; 
+      border-radius: 20px; 
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
+    }
+    
+    /* Section Profil Évoluée */
+    .profile-header {
+      margin-bottom: 25px;
+    }
+    
+    .profile-img { 
+      width: 110px; 
+      height: 110px; 
+      border-radius: 50%; 
+      border: 4px solid #0366d6; 
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(3, 102, 214, 0.2);
+    }
+    
+    h1 { 
+      color: #0366d6; 
+      font-size: 24px; 
+      margin: 15px 0 5px 0; 
+      letter-spacing: 0.5px;
+    }
+    
+    .subtitle { 
+      color: #666666; 
+      font-size: 15px;
+      margin: 0 0 20px 0; 
+      font-weight: 500;
+    }
+    
+    /* Boutons de Navigation Principaux */
+    .btn { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0366d6; 
+      color: #ffffff; 
+      padding: 15px; 
+      margin: 12px 0; 
+      text-decoration: none; 
+      border-radius: 10px; 
+      font-weight: bold; 
+      font-size: 16px; 
+      transition: background 0.2s ease;
+    }
+    
+    .btn:active { 
+      background-color: #024a9e; 
+      transform: scale(0.98);
+    }
+    
+    /* Style Spécifique pour le bouton WhatsApp */
+    .btn-whatsapp { 
+      background-color: #25D366; 
+    }
+    
+    .btn-whatsapp:active { 
+      background-color: #1ebd59; 
+    }
+    
+    /* Titres des Catégories Internes */
+    .section-title { 
+      font-size: 18px; 
+      color: #222222; 
+      margin: 35px 0 15px 0; 
+      text-align: left; 
+      border-bottom: 2px solid #0366d6; 
+      padding-bottom: 6px; 
+      font-weight: bold;
+    }
+    
+    /* Cartes d'affichage de vos projets */
+    .project-card { 
+      background: #ffffff; 
+      border: 1px solid #e3e8ee; 
+      border-radius: 12px; 
+      padding: 16px; 
+      margin-bottom: 18px; 
+      text-align: left; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+    
+    /* Faux écran d'illustration des projets */
+    .project-banner { 
+      width: 100%; 
+      height: 130px; 
+      background: linear-gradient(135deg, #e0e6ed, #b3c6ff); 
+      border-radius: 8px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: #4a5568; 
+      font-weight: 600; 
+      font-size: 14px; 
+      margin-bottom: 12px; 
+    }
+    
+    .project-card h3 { 
+      margin: 0 0 6px 0; 
+      font-size: 17px; 
+      color: #0366d6; 
+    }
+    
+    .project-card p { 
+      margin: 0 0 14px 0; 
+      font-size: 13.5px; 
+      color: #555555; 
+      line-height: 1.5; 
+    }
+    
+    /* Bouton miniature d'action pour le projet */
+    .btn-project-link { 
+      display: inline-block; 
+      background-color: #24292e; 
+      color: #ffffff; 
+      padding: 9px 15px; 
+      text-decoration: none; 
+      border-radius: 6px; 
+      font-size: 12.5px; 
+      font-weight: 600; 
+    }
+    
+    .btn-project-link:active { 
+      background-color: #000000; 
+    }
+    
+    /* Pied de page de l'application */
+    .app-footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #999999;
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="francois.jpg.jpeg" alt="Rigobert">
-    <h1>RIGOBERT FRANCOIS</h1>
-    <p>Développeur Web à Bujumbura</p>
+
+  <div class="app-container">
     
-    <!-- Bouton dynamique d'installation -->
-    <button id="btnInstall" class="btn">Installer l'Application</button>
+    <!-- EN-TÊTE DU PROFIL -->
+    <div class="profile-header">
+      <img src="francois.png" alt="Rigobert Francois" class="profile-img">
+      <h1>RIGOBERT FRANCOIS</h1>
+      <p class="subtitle">Développeur Web & Mobile à Bujumbura</p>
+    </div>
     
-    <a href="#" class="btn">Mes Projets</a>
-    <a href="https://wa.me/243971984160" class="btn">Me Contacter WhatsApp</a>
-    <a href="#" class="btn">À Propos</a>
-    <a href="#" class="btn">Actualité</a>
+    <!-- BOUTON DE CONTACT DIRECT -->
+    <a href="https://wa.me" class="btn btn-whatsapp">
+      💬 Discuter sur WhatsApp
+    </a>
+
+    <!-- ZONE DÉDIÉE À VOS PROJETS -->
+    <div class="section-title">💻 Mes Réalisations</div>
+
+    <!-- Projet Unique 1 -->
+    <div class="project-card">
+      <div class="project-banner" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
+        🌐 Plateforme Web Local
+      </div>
+      <h3>Site Vitrine d'Entreprise</h3>
+      <p>Création d'un site web complet, moderne et rapide pour les commerces de Bujumbura. Optimisé pour l'affichage sur téléphones.</p>
+      <a href="#" class="btn-project-link">Découvrir la démo</a>
+    </div>
+
+    <!-- Projet Unique 2 -->
+    <div class="project-card">
+      <div class="project-banner" style="background: linear-gradient(135deg, #2af598, #009efd); color: white;">
+        📊 Outil Logique JS
+      </div>
+      <h3>Application de Gestion de Budget</h3>
+      <p>Outil numérique développé en JavaScript permettant de suivre et calculer les flux de trésorerie quotidiens de manière autonome.</p>
+      <a href="#" class="btn-project-link">Lancer l'application</a>
+    </div>
+
+    <!-- Projet Unique 3 -->
+    <div class="project-card">
+      <div class="project-banner" style="background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #333;">
+        📱 Interface Responsive
+      </div>
+      <h3>Maquette de Messagerie Web</h3>
+      <p>Intégration d'une interface utilisateur fluide inspirée des grands réseaux de communication. Un travail axé sur la précision du CSS.</p>
+      <a href="#" class="btn-project-link">Voir le code source</a>
+    </div>
+
+    <!-- SECTION DE NAVIGATION DU PORTFOLIO -->
+    <div class="section-title">📂 Menu Principal</div>
+    
+    <a href="#" class="btn">✨ Mon Parcours & Compétences</a>
+    <a href="#" class="btn">📰 Actualités & Blog Technologie</a>
+    
+    <!-- PIED DE PAGE -->
+    <div class="app-footer">
+      &copy; 2026 Rigobert Francois. Tous droits réservés.
+    </div>
+
   </div>
 
-  <!-- INJECTION DU SCRIPT APPLICATION -->
+  <!-- ========================================== -->
+  <!-- SCRIPT TECHNIQUE DE L'APPLICATION (PWA)     -->
+  <!-- ========================================== -->
   <script>
-    // 1. Enregistrement du Service Worker
+    // Enregistrement sécurisé du Service Worker pour le support hors-ligne
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('Service Worker actif !'))
-          .catch(err => console.log('Erreur Service Worker', err));
+          .then(registration => {
+            console.log('Application initialisée avec succès ! Zone d\'action : ', registration.scope);
+          })
+          .catch(error => {
+            console.log('Dysfonctionnement lors de l\'enregistrement de l\'application : ', error);
+          });
       });
     }
-
-    // 2. Gestion du bouton d'installation
-    let deferredPrompt;
-    const btnInstall = document.getElementById('btnInstall');
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      // On affiche le bouton d'installation car l'appareil est compatible
-      btnInstall.style.display = 'block';
-    });
-
-    btnInstall.addEventListener('click', async () => {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        if (outcome === 'accepted') {
-          btnInstall.style.display = 'none';
-        }
-        deferredPrompt = null;
-      }
-    });
-
-    window.addEventListener('appinstalled', () => {
-      btnInstall.style.display = 'none';
-      console.log('Application installée avec succès !');
-    });
   </script>
+
 </body>
 </html>
