@@ -1,21 +1,17 @@
 {
-  "name": "Francois Rigobert - Développeur Web Pro",
-  "short_name": "RigoDev",
-  "description": "Création de sites web professionnels au Burundi",
-  "start_url": "/",
+  "name": "Rigobert Francois Portfolio",
+  "short_name": "Rigobert",
+  "description": "Développeur Web à Bujumbura",
+  "start_url": "/rigobertfrancois/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "theme_color": "#0366d6",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png", 
+      "src": "francois.jpg.jpeg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ]
 }
