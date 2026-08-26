@@ -9,16 +9,15 @@
   <!-- CONFIGURATION APPLICATION MOBILE (PWA)       -->
   <!-- ========================================== -->
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="francois.jpg">
+  <link rel="apple-touch-icon" href="francois.jpg.jpeg">
   <meta name="theme-color" content="#0366d6">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   
   <!-- ========================================== -->
-  <!-- STYLE GRAPHIQUE (DESIGN DE L'APPLICATION)  -->
+  <!-- STYLE GRAPHISME (DESIGN DE L'APPLICATION)  -->
   <!-- ========================================== -->
   <style>
-    /* Réinitialisation de base */
     * { box-sizing: border-box; }
     
     body { 
@@ -30,7 +29,6 @@
       margin: 0; 
     }
     
-    /* Conteneur principal de type application mobile */
     .app-container { 
       background: #ffffff; 
       max-width: 420px; 
@@ -40,7 +38,6 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
     }
     
-    /* Section Profil Évoluée */
     .profile-header {
       margin-bottom: 25px;
     }
@@ -68,7 +65,6 @@
       font-weight: 500;
     }
     
-    /* Boutons de Navigation Principaux */
     .btn { 
       display: flex;
       align-items: center;
@@ -81,7 +77,6 @@
       border-radius: 10px; 
       font-weight: bold; 
       font-size: 16px; 
-      transition: background 0.2s ease;
     }
     
     .btn:active { 
@@ -89,7 +84,6 @@
       transform: scale(0.98);
     }
     
-    /* Style Spécifique pour le bouton WhatsApp */
     .btn-whatsapp { 
       background-color: #25D366; 
     }
@@ -98,7 +92,6 @@
       background-color: #1ebd59; 
     }
     
-    /* Titres des Catégories Internes */
     .section-title { 
       font-size: 18px; 
       color: #222222; 
@@ -109,7 +102,6 @@
       font-weight: bold;
     }
     
-    /* Cartes d'affichage de vos projets */
     .project-card { 
       background: #ffffff; 
       border: 1px solid #e3e8ee; 
@@ -117,19 +109,16 @@
       padding: 16px; 
       margin-bottom: 18px; 
       text-align: left; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
     }
     
-    /* Faux écran d'illustration des projets */
     .project-banner { 
       width: 100%; 
       height: 130px; 
-      background: linear-gradient(135deg, #e0e6ed, #b3c6ff); 
       border-radius: 8px; 
       display: flex; 
       align-items: center; 
       justify-content: center; 
-      color: #4a5568; 
+      color: #ffffff; 
       font-weight: 600; 
       font-size: 14px; 
       margin-bottom: 12px; 
@@ -148,7 +137,6 @@
       line-height: 1.5; 
     }
     
-    /* Bouton miniature d'action pour le projet */
     .btn-project-link { 
       display: inline-block; 
       background-color: #24292e; 
@@ -164,7 +152,6 @@
       background-color: #000000; 
     }
     
-    /* Pied de page de l'application */
     .app-footer {
       margin-top: 30px;
       font-size: 12px;
@@ -178,7 +165,7 @@
     
     <!-- EN-TÊTE DU PROFIL -->
     <div class="profile-header">
-      <img src="francois.jpg" alt="Rigobert Francois" class="profile-img">
+      <img src="francois.jpg.jpeg" alt="Rigobert Francois" class="profile-img">
       <h1>RIGOBERT FRANCOIS</h1>
       <p class="subtitle">Développeur Web & Mobile à Bujumbura</p>
     </div>
@@ -191,34 +178,34 @@
     <!-- ZONE DÉDIÉE À VOS PROJETS -->
     <div class="section-title">💻 Mes Réalisations</div>
 
-    <!-- Projet Unique 1 -->
+    <!-- Projet 1 : Restaurant -->
     <div class="project-card">
-      <div class="project-banner" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
-        🌐 Plateforme Web Local
+      <div class="project-banner" style="background: linear-gradient(135deg, #d62828, #ff6b6b);">
+        🍽️ Restauration & Commande
       </div>
-      <h3>Site Vitrine d'Entreprise</h3>
-      <p>Création d'un site web complet, moderne et rapide pour les commerces de Bujumbura. Optimisé pour l'affichage sur téléphones.</p>
-      <a href="#" class="btn-project-link">Découvrir la démo</a>
+      <h3>Bujumbura Food</h3>
+      <p>Système web complet pour restaurant avec menu numérique interactif et liaison automatique des commandes vers WhatsApp.</p>
+      <a href="restaurant.html" class="btn-project-link">Découvrir la démo</a>
     </div>
 
-    <!-- Projet Unique 2 -->
+    <!-- Projet 2 : Boutique E-commerce -->
     <div class="project-card">
-      <div class="project-banner" style="background: linear-gradient(135deg, #2af598, #009efd); color: white;">
-        📊 Outil Logique JS
+      <div class="project-banner" style="background: linear-gradient(135deg, #e91e63, #9c27b0);">
+        🛍️ E-Commerce & Panier
       </div>
-      <h3>Application de Gestion de Budget</h3>
-      <p>Outil numérique développé en JavaScript permettant de suivre et calculer les flux de trésorerie quotidiens de manière autonome.</p>
-      <a href="#" class="btn-project-link">Lancer l'application</a>
+      <h3>Boutique de Mode en Ligne</h3>
+      <p>Plateforme marchande mobile intégrant un catalogue de produits moderne et un panier d'achat autonome fluide.</p>
+      <a href="boutique.html" class="btn-project-link">Lancer l'application</a>
     </div>
 
-    <!-- Projet Unique 3 -->
+    <!-- Projet 3 : Médical -->
     <div class="project-card">
-      <div class="project-banner" style="background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #333;">
-        📱 Interface Responsive
+      <div class="project-banner" style="background: linear-gradient(135deg, #00a896, #028090);">
+        🏥 E-Santé & Rendez-vous
       </div>
-      <h3>Maquette de Messagerie Web</h3>
-      <p>Intégration d'une interface utilisateur fluide inspirée des grands réseaux de communication. Un travail axé sur la précision du CSS.</p>
-      <a href="#" class="btn-project-link">Voir le code source</a>
+      <h3>Cabinet Médical Connecté</h3>
+      <p>Solution applicative de prise de rendez-vous médicaux, fiches de praticiens spécialisés et suivi de santé mobile.</p>
+      <a href="medical.html" class="btn-project-link">Ouvrir la démo</a>
     </div>
 
     <!-- SECTION DE NAVIGATION DU PORTFOLIO -->
@@ -234,20 +221,13 @@
 
   </div>
 
-  <!-- ========================================== -->
-  <!-- SCRIPT TECHNIQUE DE L'APPLICATION (PWA)     -->
-  <!-- ========================================== -->
+  <!-- SCRIPT TECHNIQUE DE L'APPLICATION (PWA) -->
   <script>
-    // Enregistrement sécurisé du Service Worker pour le support hors-ligne
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
-          .then(registration => {
-            console.log('Application initialisée avec succès ! Zone d\'action : ', registration.scope);
-          })
-          .catch(error => {
-            console.log('Dysfonctionnement lors de l\'enregistrement de l\'application : ', error);
-          });
+          .then(reg => console.log('Application opérationnelle !'))
+          .catch(err => console.log('Erreur d\'initialisation PWA', err));
       });
     }
   </script>
