@@ -12,12 +12,12 @@
   "dir": "ltr",
   "icons": [
     {
-      "src": "francois.jpg.jpeg",
+      "src": "francois.jpg",
       "sizes": "192x192",
       "type": "image/jpeg"
     },
     {
-      "src": "francois.jpg.jpeg",
+      "src": "francois.jpg",
       "sizes": "512x512",
       "type": "image/jpeg"
     }
