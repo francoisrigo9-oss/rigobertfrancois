@@ -5,7 +5,7 @@ const ASSETS = [
   './',
   './index.html',
   './manifest.json',
-  './francois.jpg.jpeg'
+  './francois.jpg'
 ];
 
 // 1. Installation : Mise en cache des fichiers de base
