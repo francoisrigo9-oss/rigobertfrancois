@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,7 +16,6 @@
 
   <meta name="theme-color" content="#0366d6">
 
-  <!-- PWA -->
   <link rel="manifest" href="manifest.json">
 
   <link
@@ -46,12 +44,7 @@
     content="black-translucent"
   >
 
-
   <style>
-
-    /* =========================
-       RESET
-    ========================= */
 
     * {
       box-sizing: border-box;
@@ -115,31 +108,58 @@
 
 
     /* =========================
-       PROFIL
+       PROFIL AVEC PHOTO
     ========================= */
 
     .profile-header {
 
+      position: relative;
+
       text-align: center;
 
-      margin-bottom: 25px;
+      margin: -30px -22px 25px;
+
+      padding: 45px 20px 30px;
+
+      min-height: 300px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0.48),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url("francois.jpg");
+
+      background-size: cover;
+
+      background-position: center;
+
+      color: white;
     }
 
 
     .profile-img {
 
-      width: 115px;
+      width: 120px;
 
-      height: 115px;
+      height: 120px;
 
       border-radius: 50%;
 
       object-fit: cover;
 
-      border: 4px solid #0366d6;
+      border: 4px solid #ffffff;
 
       box-shadow:
-        0 6px 20px rgba(3, 102, 214, 0.25);
+        0 8px 25px rgba(0, 0, 0, 0.35);
 
       display: block;
 
@@ -149,7 +169,7 @@
 
     h1 {
 
-      color: #0366d6;
+      color: #ffffff;
 
       font-size: 25px;
 
@@ -158,21 +178,27 @@
       letter-spacing: 0.5px;
 
       margin-bottom: 6px;
+
+      text-shadow:
+        0 2px 8px rgba(0,0,0,0.5);
     }
 
 
     .subtitle {
 
-      color: #666;
+      color: #ffffff;
 
       font-size: 15px;
 
       line-height: 1.5;
+
+      text-shadow:
+        0 2px 6px rgba(0,0,0,0.5);
     }
 
 
     /* =========================
-       MENU APPLICATIONS
+       TITRE APPLICATIONS
     ========================= */
 
     .app-menu-title {
@@ -188,6 +214,10 @@
       margin: 25px 0 12px;
     }
 
+
+    /* =========================
+       LES 3 BOUTONS
+    ========================= */
 
     .app-menu {
 
@@ -212,7 +242,7 @@
 
       text-align: center;
 
-      min-height: 55px;
+      min-height: 65px;
 
       padding: 8px 5px;
 
@@ -278,7 +308,54 @@
 
 
     /* =========================
-       BOUTONS
+       WHATSAPP
+    ========================= */
+
+    .btn-whatsapp {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 100%;
+
+      min-height: 52px;
+
+      padding: 14px 18px;
+
+      margin: 12px 0;
+
+      border-radius: 12px;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      font-size: 15px;
+
+      color: white;
+
+      background: #25d366;
+
+      box-shadow:
+        0 5px 12px rgba(37, 211, 102, 0.20);
+
+      transition: 0.2s ease;
+    }
+
+
+    .btn-whatsapp:hover {
+
+      background: #20bd5b;
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       BOUTONS MENU
     ========================= */
 
     .btn {
@@ -325,31 +402,6 @@
     }
 
 
-    .btn:active {
-
-      transform: scale(0.97);
-    }
-
-
-    /* =========================
-       WHATSAPP
-    ========================= */
-
-    .btn-whatsapp {
-
-      background: #25d366;
-
-      box-shadow:
-        0 5px 12px rgba(37, 211, 102, 0.20);
-    }
-
-
-    .btn-whatsapp:hover {
-
-      background: #20bd5b;
-    }
-
-
     /* =========================
        TITRES
     ========================= */
@@ -370,155 +422,6 @@
       padding-bottom: 8px;
 
       font-weight: 800;
-    }
-
-
-    /* =========================
-       PROJETS
-    ========================= */
-
-    .project-card {
-
-      background: #ffffff;
-
-      border:
-        1px solid #e2e8f0;
-
-      border-radius: 15px;
-
-      padding: 15px;
-
-      margin-bottom: 18px;
-
-      text-align: left;
-
-      transition: 0.2s ease;
-    }
-
-
-    .project-card:hover {
-
-      transform: translateY(-3px);
-
-      box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-
-
-    .project-banner {
-
-      width: 100%;
-
-      min-height: 130px;
-
-      border-radius: 11px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      text-align: center;
-
-      color: #ffffff;
-
-      font-weight: 700;
-
-      font-size: 15px;
-
-      padding: 15px;
-
-      margin-bottom: 14px;
-    }
-
-
-    .restaurant-banner {
-
-      background:
-        linear-gradient(
-          135deg,
-          #d62828,
-          #ff6b6b
-        );
-    }
-
-
-    .boutique-banner {
-
-      background:
-        linear-gradient(
-          135deg,
-          #e91e63,
-          #9c27b0
-        );
-    }
-
-
-    .medical-banner {
-
-      background:
-        linear-gradient(
-          135deg,
-          #00a896,
-          #028090
-        );
-    }
-
-
-    .project-card h3 {
-
-      margin-bottom: 7px;
-
-      font-size: 18px;
-
-      color: #0366d6;
-    }
-
-
-    .project-card p {
-
-      margin-bottom: 14px;
-
-      font-size: 14px;
-
-      color: #555;
-
-      line-height: 1.55;
-    }
-
-
-    .btn-project-link {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      background: #24292e;
-
-      color: #ffffff;
-
-      padding: 10px 15px;
-
-      text-decoration: none;
-
-      border-radius: 8px;
-
-      font-size: 13px;
-
-      font-weight: 700;
-
-      transition: 0.2s ease;
-    }
-
-
-    .btn-project-link:hover {
-
-      background: #0366d6;
-
-      transform: translateY(-1px);
     }
 
 
@@ -565,6 +468,14 @@
       }
 
 
+      .profile-header {
+
+        margin: -25px -15px 25px;
+
+        min-height: 280px;
+      }
+
+
       .profile-img {
 
         width: 100px;
@@ -588,12 +499,6 @@
       .app-menu {
 
         grid-template-columns: 1fr;
-      }
-
-
-      .project-banner {
-
-        min-height: 110px;
       }
 
     }
@@ -621,9 +526,11 @@
       }
 
 
-      .project-banner {
+      .profile-header {
 
-        min-height: 150px;
+        margin: -40px -35px 30px;
+
+        min-height: 340px;
       }
 
     }
@@ -663,7 +570,7 @@
 
 
     <!-- =========================
-         MENU DES APPLICATIONS
+         MES 3 APPLICATIONS
     ========================= -->
 
     <div class="app-menu-title">
@@ -713,17 +620,9 @@
          WHATSAPP
     ========================= -->
 
-    <!--
-      REMPLACE 257XXXXXXXX PAR TON
-      NUMÉRO WHATSAPP.
-
-      Exemple :
-      https://wa.me/257XXXXXXXX
-    -->
-
     <a
       href="https://wa.me/257XXXXXXXX"
-      class="btn btn-whatsapp"
+      class="btn-whatsapp"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -731,145 +630,6 @@
       💬 Discuter sur WhatsApp
 
     </a>
-
-
-    <!-- =========================
-         MES RÉALISATIONS
-    ========================= -->
-
-    <section id="projets">
-
-      <h2 class="section-title">
-
-        💻 Mes Réalisations
-
-      </h2>
-
-
-      <!-- =========================
-           RESTAURANT
-      ========================= -->
-
-      <article class="project-card">
-
-        <div class="project-banner restaurant-banner">
-
-          🍽️ Restauration & Commande
-
-        </div>
-
-
-        <h3>
-
-          Bujumbura Food
-
-        </h3>
-
-
-        <p>
-
-          Système web complet pour restaurant
-          avec menu numérique interactif et
-          liaison automatique des commandes
-          vers WhatsApp.
-
-        </p>
-
-
-        <a
-          href="restaurant.html"
-          class="btn-project-link"
-        >
-
-          Découvrir la démo →
-
-        </a>
-
-      </article>
-
-
-      <!-- =========================
-           BOUTIQUE
-      ========================= -->
-
-      <article class="project-card">
-
-        <div class="project-banner boutique-banner">
-
-          🛍️ E-Commerce & Panier
-
-        </div>
-
-
-        <h3>
-
-          Boutique de Mode en Ligne
-
-        </h3>
-
-
-        <p>
-
-          Plateforme marchande mobile intégrant
-          un catalogue de produits moderne et
-          un panier d'achat fluide.
-
-        </p>
-
-
-        <a
-          href="boutique.html"
-          class="btn-project-link"
-        >
-
-          Lancer l'application →
-
-        </a>
-
-      </article>
-
-
-      <!-- =========================
-           CENTRE MÉDICAL
-      ========================= -->
-
-      <article class="project-card">
-
-        <div class="project-banner medical-banner">
-
-          🏥 E-Santé & Rendez-vous
-
-        </div>
-
-
-        <h3>
-
-          Cabinet Médical Connecté
-
-        </h3>
-
-
-        <p>
-
-          Solution applicative de prise de
-          rendez-vous médicaux, fiches des
-          praticiens et suivi de santé mobile.
-
-        </p>
-
-
-        <a
-          href="medical.html"
-          class="btn-project-link"
-        >
-
-          Ouvrir la démo →
-
-        </a>
-
-      </article>
-
-    </section>
 
 
     <!-- =========================
@@ -1051,4 +811,3 @@
 </body>
 
 </html>
-```
