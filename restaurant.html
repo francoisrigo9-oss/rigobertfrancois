@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Bujumbura Food</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f7fa;
+padding:15px;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+}
+
+header{
+height:250px;
+border-radius:20px;
+overflow:hidden;
+
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("images/restaurant.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+color:white;
+text-align:center;
+}
+
+header h1{
+font-size:30px;
+}
+
+header p{
+margin-top:10px;
+}
+
+h2{
+margin:25px 0 15px;
+}
+
+.menu{
+display:grid;
+gap:15px;
+}
+
+.food{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.food img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.food-content{
+padding:15px;
+}
+
+.food h3{
+color:#d62828;
+margin-bottom:7px;
+}
+
+.price{
+font-weight:bold;
+font-size:18px;
+margin:10px 0;
+}
+
+.order{
+display:block;
+text-align:center;
+background:#25d366;
+color:white;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.home{
+display:block;
+background:#0366d6;
+color:white;
+text-align:center;
+padding:14px;
+border-radius:10px;
+text-decoration:none;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>🍽️ BUJUMBURA FOOD</h1>
+
+<p>Restaurant & Commande en ligne</p>
+
+</header>
+
+<h2>🍴 Notre Menu</h2>
+
+<div class="menu">
+
+<div class="food">
+
+<img src="images/plat1.jpg">
+
+<div class="food-content">
+
+<h3>Poulet Grillé</h3>
+
+<p>Poulet grillé accompagné de frites.</p>
+
+<div class="price">15 000 FBu</div>
+
+<a href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20un%20Poulet%20Grillé"
+class="order">
+Commander
+</a>
+
+</div>
+</div>
+
+
+<div class="food">
+
+<img src="images/plat2.jpg">
+
+<div class="food-content">
+
+<h3>Pizza</h3>
+
+<p>Pizza spéciale avec plusieurs ingrédients.</p>
+
+<div class="price">20 000 FBu</div>
+
+<a href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20une%20Pizza"
+class="order">
+Commander
+</a>
+
+</div>
+</div>
+
+
+<div class="food">
+
+<img src="images/plat3.jpg">
+
+<div class="food-content">
+
+<h3>Hamburger</h3>
+
+<p>Hamburger maison avec frites.</p>
+
+<div class="price">12 000 FBu</div>
+
+<a href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20un%20Hamburger"
+class="order">
+Commander
+</a>
+
+</div>
+</div>
+
+</div>
+
+<a href="index.html" class="home">
+🏠 Retour à l'accueil
+</a>
+
+</div>
+
+</body>
+</html>
