@@ -1,813 +1,276 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Rigobert Francois | Développeur Web & Mobile</title>
-
-  <meta
-    name="description"
-    content="Portfolio professionnel de Rigobert Francois, développeur Web et Mobile à Bujumbura."
-  >
-
-  <meta name="theme-color" content="#0366d6">
-
-  <link rel="manifest" href="manifest.json">
-
-  <link
-    rel="icon"
-    type="image/jpeg"
-    href="francois.jpg"
-  >
-
-  <link
-    rel="apple-touch-icon"
-    href="francois.jpg"
-  >
-
-  <meta
-    name="mobile-web-app-capable"
-    content="yes"
-  >
-
-  <meta
-    name="apple-mobile-web-app-capable"
-    content="yes"
-  >
-
-  <meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="black-translucent"
-  >
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
-      background:
-        linear-gradient(
-          135deg,
-          #eef4ff,
-          #f8fafc
-        );
-
-      color: #333;
-
-      min-height: 100vh;
-
-      padding: 20px 15px;
-    }
-
-
-    /* =========================
-       APPLICATION
-    ========================= */
-
-    .app-container {
-
-      width: 100%;
-
-      max-width: 520px;
-
-      margin: 0 auto;
-
-      background: #ffffff;
-
-      border-radius: 24px;
-
-      padding: 30px 22px;
-
-      box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.10);
-
-      overflow: hidden;
-    }
-
-
-    /* =========================
-       PROFIL AVEC PHOTO
-    ========================= */
-
-    .profile-header {
-
-      position: relative;
-
-      text-align: center;
-
-      margin: -30px -22px 25px;
-
-      padding: 45px 20px 30px;
-
-      min-height: 300px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-      justify-content: center;
-
-      background-image:
-        linear-gradient(
-          rgba(0, 0, 0, 0.48),
-          rgba(0, 0, 0, 0.65)
-        ),
-        url("francois.jpg");
-
-      background-size: cover;
-
-      background-position: center;
-
-      color: white;
-    }
-
-
-    .profile-img {
-
-      width: 120px;
-
-      height: 120px;
-
-      border-radius: 50%;
-
-      object-fit: cover;
-
-      border: 4px solid #ffffff;
-
-      box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.35);
-
-      display: block;
-
-      margin: 0 auto 15px;
-    }
-
-
-    h1 {
-
-      color: #ffffff;
-
-      font-size: 25px;
-
-      font-weight: 800;
-
-      letter-spacing: 0.5px;
-
-      margin-bottom: 6px;
-
-      text-shadow:
-        0 2px 8px rgba(0,0,0,0.5);
-    }
-
-
-    .subtitle {
-
-      color: #ffffff;
-
-      font-size: 15px;
-
-      line-height: 1.5;
-
-      text-shadow:
-        0 2px 6px rgba(0,0,0,0.5);
-    }
-
-
-    /* =========================
-       TITRE APPLICATIONS
-    ========================= */
-
-    .app-menu-title {
-
-      text-align: center;
-
-      font-size: 14px;
-
-      font-weight: bold;
-
-      color: #777;
-
-      margin: 25px 0 12px;
-    }
-
-
-    /* =========================
-       LES 3 BOUTONS
-    ========================= */
-
-    .app-menu {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 8px;
-
-      margin-bottom: 25px;
-    }
-
-
-    .app-menu a {
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      text-align: center;
-
-      min-height: 65px;
-
-      padding: 8px 5px;
-
-      color: white;
-
-      text-decoration: none;
-
-      border-radius: 11px;
-
-      font-size: 12px;
-
-      font-weight: 700;
-
-      transition: 0.2s ease;
-    }
-
-
-    .app-menu a:hover {
-
-      transform: translateY(-2px);
-
-      opacity: 0.9;
-    }
-
-
-    .app-menu a:active {
-
-      transform: scale(0.96);
-    }
-
-
-    .restaurant {
-
-      background:
-        linear-gradient(
-          135deg,
-          #d62828,
-          #ff6b6b
-        );
-    }
-
-
-    .boutique {
-
-      background:
-        linear-gradient(
-          135deg,
-          #e91e63,
-          #9c27b0
-        );
-    }
-
-
-    .medical {
-
-      background:
-        linear-gradient(
-          135deg,
-          #00a896,
-          #028090
-        );
-    }
-
-
-    /* =========================
-       WHATSAPP
-    ========================= */
-
-    .btn-whatsapp {
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      width: 100%;
-
-      min-height: 52px;
-
-      padding: 14px 18px;
-
-      margin: 12px 0;
-
-      border-radius: 12px;
-
-      text-decoration: none;
-
-      font-weight: 700;
-
-      font-size: 15px;
-
-      color: white;
-
-      background: #25d366;
-
-      box-shadow:
-        0 5px 12px rgba(37, 211, 102, 0.20);
-
-      transition: 0.2s ease;
-    }
-
-
-    .btn-whatsapp:hover {
-
-      background: #20bd5b;
-
-      transform: translateY(-2px);
-    }
-
-
-    /* =========================
-       BOUTONS MENU
-    ========================= */
-
-    .btn {
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      width: 100%;
-
-      min-height: 52px;
-
-      padding: 14px 18px;
-
-      margin: 12px 0;
-
-      border-radius: 12px;
-
-      text-decoration: none;
-
-      font-weight: 700;
-
-      font-size: 15px;
-
-      color: white;
-
-      background: #0366d6;
-
-      box-shadow:
-        0 5px 12px rgba(3, 102, 214, 0.18);
-
-      transition: 0.2s ease;
-    }
-
-
-    .btn:hover {
-
-      transform: translateY(-2px);
-
-      box-shadow:
-        0 8px 18px rgba(3, 102, 214, 0.25);
-    }
-
-
-    /* =========================
-       TITRES
-    ========================= */
-
-    .section-title {
-
-      font-size: 19px;
-
-      color: #222;
-
-      margin: 35px 0 18px;
-
-      text-align: left;
-
-      border-bottom:
-        2px solid #0366d6;
-
-      padding-bottom: 8px;
-
-      font-weight: 800;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    .app-footer {
-
-      margin-top: 30px;
-
-      padding-top: 20px;
-
-      border-top:
-        1px solid #e5e7eb;
-
-      font-size: 12px;
-
-      line-height: 1.6;
-
-      color: #999;
-
-      text-align: center;
-    }
-
-
-    /* =========================
-       PETITS ÉCRANS
-    ========================= */
-
-    @media (max-width: 360px) {
-
-      body {
-
-        padding: 10px;
-      }
-
-
-      .app-container {
-
-        padding: 25px 15px;
-
-        border-radius: 18px;
-      }
-
-
-      .profile-header {
-
-        margin: -25px -15px 25px;
-
-        min-height: 280px;
-      }
-
-
-      .profile-img {
-
-        width: 100px;
-
-        height: 100px;
-      }
-
-
-      h1 {
-
-        font-size: 21px;
-      }
-
-
-      .subtitle {
-
-        font-size: 13px;
-      }
-
-
-      .app-menu {
-
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-
-    /* =========================
-       GRAND ÉCRAN
-    ========================= */
-
-    @media (min-width: 768px) {
-
-      body {
-
-        padding-top: 40px;
-
-        padding-bottom: 40px;
-      }
-
-
-      .app-container {
-
-        max-width: 600px;
-
-        padding: 40px 35px;
-      }
-
-
-      .profile-header {
-
-        margin: -40px -35px 30px;
-
-        min-height: 340px;
-      }
-
-    }
-
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rigobert Francois | Développeur Web & Mobile</title>
+
+<meta name="description"
+content="Portfolio professionnel de Rigobert Francois, développeur Web et Mobile.">
+
+<meta name="theme-color" content="#0366d6">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="francois.jpg">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#eaf2ff,#f8fafc);
+color:#333;
+padding:20px 15px;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.profile{
+min-height:360px;
+padding:40px 20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+background-image:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+url("francois.jpg");
+
+background-size:cover;
+background-position:center;
+}
+
+.profile img{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+margin-bottom:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+
+.profile h1{
+color:white;
+font-size:27px;
+margin-bottom:8px;
+}
+
+.profile p{
+color:white;
+font-size:15px;
+}
+
+.content{
+padding:25px;
+}
+
+.title{
+text-align:center;
+font-size:14px;
+font-weight:bold;
+color:#777;
+margin-bottom:15px;
+}
+
+.apps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.apps a{
+padding:18px 5px;
+color:white;
+text-decoration:none;
+border-radius:13px;
+text-align:center;
+font-weight:bold;
+font-size:13px;
+transition:.2s;
+}
+
+.apps a:hover{
+transform:translateY(-3px);
+}
+
+.restaurant{
+background:linear-gradient(135deg,#d62828,#ff6b6b);
+}
+
+.boutique{
+background:linear-gradient(135deg,#e91e63,#9c27b0);
+}
+
+.medical{
+background:linear-gradient(135deg,#00a896,#028090);
+}
+
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+padding:15px;
+margin-top:13px;
+border-radius:12px;
+background:#0366d6;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.whatsapp{
+background:#25d366;
+}
+
+.section{
+margin-top:30px;
+}
+
+.section h2{
+font-size:20px;
+border-bottom:2px solid #0366d6;
+padding-bottom:8px;
+margin-bottom:15px;
+}
+
+.footer{
+text-align:center;
+color:#888;
+font-size:12px;
+padding-top:25px;
+margin-top:30px;
+border-top:1px solid #ddd;
+}
+
+@media(max-width:400px){
+
+.apps{
+grid-template-columns:1fr;
+}
+
+.profile h1{
+font-size:22px;
+}
+
+}
+
+</style>
 </head>
-
 
 <body>
 
+<div class="container">
 
-  <main class="app-container">
+<header class="profile">
 
+<img src="francois.jpg"
+alt="Photo de Rigobert Francois">
 
-    <!-- =========================
-         PROFIL
-    ========================= -->
+<h1>RIGOBERT FRANCOIS</h1>
 
-    <header class="profile-header">
+<p>Développeur Web & Mobile</p>
+<p>Bujumbura</p>
 
-      <img
-        src="francois.jpg"
-        alt="Photo de profil de Rigobert Francois"
-        class="profile-img"
-      >
+</header>
 
-      <h1>
-        RIGOBERT FRANCOIS
-      </h1>
+<div class="content">
 
-      <p class="subtitle">
-        Développeur Web & Mobile à Bujumbura
-      </p>
+<div class="title">
+📂 MES 3 APPLICATIONS
+</div>
 
-    </header>
+<div class="apps">
 
+<a href="restaurant.html" class="restaurant">
+🍽️<br>Restaurant
+</a>
 
-    <!-- =========================
-         MES 3 APPLICATIONS
-    ========================= -->
+<a href="boutique.html" class="boutique">
+🛍️<br>Boutique
+</a>
 
-    <div class="app-menu-title">
+<a href="medical.html" class="medical">
+🏥<br>Centre médical
+</a>
 
-      📂 MES APPLICATIONS
+</div>
 
-    </div>
+<a href="https://wa.me/257XXXXXXXX"
+class="btn whatsapp"
+target="_blank">
+💬 Discuter sur WhatsApp
+</a>
 
 
-    <nav class="app-menu">
+<div class="section">
 
+<h2>👨‍💻 Mon Portfolio</h2>
 
-      <a
-        href="restaurant.html"
-        class="restaurant"
-      >
+<a href="competences.html" class="btn">
+✨ Mon Parcours & Compétences
+</a>
 
-        🍽️ Restaurant
+<a href="actualites.html" class="btn">
+📰 Actualités & Blog Technologie
+</a>
 
-      </a>
+</div>
 
 
-      <a
-        href="boutique.html"
-        class="boutique"
-      >
+<footer class="footer">
 
-        🛍️ Boutique
+<p>© 2026 Rigobert Francois</p>
 
-      </a>
+<p>Développeur Web & Mobile</p>
 
+</footer>
 
-      <a
-        href="medical.html"
-        class="medical"
-      >
+</div>
 
-        🏥 Centre médical
+</div>
 
-      </a>
+<script>
 
+if("serviceWorker" in navigator){
 
-    </nav>
+window.addEventListener("load",function(){
 
+navigator.serviceWorker.register("sw.js")
 
-    <!-- =========================
-         WHATSAPP
-    ========================= -->
+.then(function(){
 
-    <a
-      href="https://wa.me/257XXXXXXXX"
-      class="btn-whatsapp"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+console.log("PWA activée");
 
-      💬 Discuter sur WhatsApp
+})
 
-    </a>
+.catch(function(error){
 
+console.log("Erreur PWA :",error);
 
-    <!-- =========================
-         MENU PRINCIPAL
-    ========================= -->
+});
 
-    <section id="menu">
+});
 
-      <h2 class="section-title">
+}
 
-        📂 Menu Principal
-
-      </h2>
-
-
-      <a
-        href="#competences"
-        class="btn"
-      >
-
-        ✨ Mon Parcours & Compétences
-
-      </a>
-
-
-      <a
-        href="#actualites"
-        class="btn"
-      >
-
-        📰 Actualités & Blog Technologie
-
-      </a>
-
-    </section>
-
-
-    <!-- =========================
-         COMPÉTENCES
-    ========================= -->
-
-    <section id="competences">
-
-      <h2 class="section-title">
-
-        🚀 Compétences
-
-      </h2>
-
-
-      <a
-        href="#"
-        class="btn"
-      >
-
-        🌐 Développement Web
-
-      </a>
-
-
-      <a
-        href="#"
-        class="btn"
-      >
-
-        📱 Développement Mobile
-
-      </a>
-
-
-      <a
-        href="#"
-        class="btn"
-      >
-
-        🗄️ Bases de données
-
-      </a>
-
-    </section>
-
-
-    <!-- =========================
-         ACTUALITÉS
-    ========================= -->
-
-    <section id="actualites">
-
-      <h2 class="section-title">
-
-        📰 Actualités
-
-      </h2>
-
-
-      <a
-        href="#"
-        class="btn"
-      >
-
-        💡 Blog Technologie
-
-      </a>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer class="app-footer">
-
-      <p>
-
-        © 2026 Rigobert Francois.
-        Tous droits réservés.
-
-      </p>
-
-
-      <p>
-
-        Développeur Web & Mobile
-
-      </p>
-
-    </footer>
-
-
-  </main>
-
-
-  <!-- =========================
-       SERVICE WORKER
-  ========================= -->
-
-  <script>
-
-    if ("serviceWorker" in navigator) {
-
-      window.addEventListener(
-        "load",
-        function () {
-
-          navigator.serviceWorker
-            .register("./sw.js")
-
-            .then(
-              function (registration) {
-
-                console.log(
-                  "✅ Application PWA opérationnelle !",
-                  registration.scope
-                );
-
-              }
-            )
-
-            .catch(
-              function (error) {
-
-                console.error(
-                  "❌ Erreur PWA :",
-                  error
-                );
-
-              }
-            );
-
-        }
-      );
-
-    }
-
-  </script>
-
+</script>
 
 </body>
-
 </html>
