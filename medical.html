@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Centre Médical</title>
 
@@ -25,17 +24,19 @@ padding:15px;
 }
 
 .container{
-max-width:600px;
+max-width:650px;
 margin:auto;
 }
 
-header{
-height:250px;
+.hero{
+
+height:300px;
+
 border-radius:20px;
 
 background:
-linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.55)),
-url("images/medical.jpg");
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
+url("https://website-for-doctors.com/assets/imgs/header/4.jpg");
 
 background-size:cover;
 background-position:center;
@@ -49,39 +50,50 @@ color:white;
 text-align:center;
 }
 
-header h1{
-font-size:27px;
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+margin-top:10px;
 }
 
 h2{
-margin:25px 0 15px;
 color:#028090;
+margin:25px 0 15px;
 }
 
-.doctors{
+.services{
 display:grid;
-gap:15px;
+gap:20px;
 }
 
-.doctor{
+.card{
 background:white;
-border-radius:15px;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+box-shadow:0 5px 18px rgba(0,0,0,.12);
 }
 
-.doctor img{
+.card img{
 width:100%;
-height:200px;
+height:240px;
 object-fit:cover;
 }
 
 .info{
-padding:15px;
+padding:18px;
 }
 
 .info h3{
 color:#028090;
+font-size:21px;
+}
+
+.info p{
+margin-top:8px;
+line-height:1.5;
+color:#555;
 }
 
 .appointment{
@@ -93,18 +105,19 @@ text-align:center;
 text-decoration:none;
 border-radius:10px;
 font-weight:bold;
-margin-top:12px;
+margin-top:15px;
 }
 
 .home{
 display:block;
 background:#0366d6;
 color:white;
+padding:15px;
 text-align:center;
-padding:14px;
-border-radius:10px;
 text-decoration:none;
-margin-top:20px;
+border-radius:10px;
+margin-top:25px;
+font-weight:bold;
 }
 
 </style>
@@ -115,7 +128,8 @@ margin-top:20px;
 
 <div class="container">
 
-<header>
+
+<header class="hero">
 
 <h1>🏥 CENTRE MÉDICAL</h1>
 
@@ -123,54 +137,82 @@ margin-top:20px;
 
 </header>
 
-<h2>👨‍⚕️ Nos praticiens</h2>
 
-<div class="doctors">
-
-<div class="doctor">
-
-<img src="images/medecin1.jpg">
-
-<div class="info">
-
-<h3>Dr. Jean</h3>
-
-<p>Médecin généraliste</p>
-
-<a href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20prendre%20un%20rendez-vous"
-class="appointment">
-📅 Prendre rendez-vous
-</a>
-
-</div>
-</div>
+<h2>👨‍⚕️ Nos Services</h2>
 
 
-<div class="doctor">
+<div class="services">
 
-<img src="images/medecin2.jpg">
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85"
+alt="Médecin">
 
 <div class="info">
 
-<h3>Dr. Marie</h3>
+<h3>👨‍⚕️ Consultation médicale</h3>
 
-<p>Médecin spécialiste</p>
+<p>
+Consultation avec un médecin
+professionnel.
+</p>
 
-<a href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20prendre%20un%20rendez-vous"
+<a
+href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20prendre%20un%20rendez-vous"
 class="appointment">
+
 📅 Prendre rendez-vous
+
 </a>
 
 </div>
+
+</div>
+
+
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85"
+alt="Centre médical">
+
+<div class="info">
+
+<h3>🩺 Suivi médical</h3>
+
+<p>
+Suivi personnalisé et accompagnement
+des patients.
+</p>
+
+<a
+href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20prendre%20un%20rendez-vous"
+class="appointment">
+
+📅 Prendre rendez-vous
+
+</a>
+
 </div>
 
 </div>
+
+
+</div>
+
 
 <a href="index.html" class="home">
+
 🏠 Retour à l'accueil
+
 </a>
+
 
 </div>
 
 </body>
+
 </html>
