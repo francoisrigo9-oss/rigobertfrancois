@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Boutique de Mode</title>
 
@@ -20,23 +19,24 @@ padding:0;
 
 body{
 font-family:Arial,sans-serif;
-background:#f7f7f9;
+background:#f8f5f8;
 padding:15px;
 }
 
 .container{
-max-width:600px;
+max-width:650px;
 margin:auto;
 }
 
-header{
-height:250px;
+.hero{
+
+height:300px;
+
 border-radius:20px;
-overflow:hidden;
 
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
-url("images/boutique.jpg");
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=85");
 
 background-size:cover;
 background-position:center;
@@ -50,8 +50,12 @@ color:white;
 text-align:center;
 }
 
-header h1{
-font-size:28px;
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+margin-top:10px;
 }
 
 h2{
@@ -60,44 +64,50 @@ margin:25px 0 15px;
 
 .products{
 display:grid;
-gap:15px;
+gap:20px;
 }
 
 .product{
 background:white;
-border-radius:15px;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+box-shadow:0 5px 18px rgba(0,0,0,.12);
 }
 
 .product img{
 width:100%;
-height:210px;
+height:260px;
 object-fit:cover;
 }
 
 .info{
-padding:15px;
+padding:18px;
 }
 
 .info h3{
 color:#9c27b0;
+font-size:21px;
+}
+
+.info p{
+margin-top:8px;
+color:#666;
 }
 
 .price{
-font-size:19px;
+font-size:20px;
 font-weight:bold;
-margin:10px 0;
+margin:12px 0;
 }
 
 .order{
 display:block;
-text-align:center;
 background:#9c27b0;
 color:white;
-padding:12px;
-border-radius:10px;
+padding:14px;
+text-align:center;
 text-decoration:none;
+border-radius:10px;
 font-weight:bold;
 }
 
@@ -105,11 +115,12 @@ font-weight:bold;
 display:block;
 background:#0366d6;
 color:white;
+padding:15px;
 text-align:center;
-padding:14px;
-border-radius:10px;
 text-decoration:none;
-margin-top:20px;
+border-radius:10px;
+margin-top:25px;
+font-weight:bold;
 }
 
 </style>
@@ -120,93 +131,129 @@ margin-top:20px;
 
 <div class="container">
 
-<header>
+
+<header class="hero">
 
 <h1>🛍️ MA BOUTIQUE</h1>
 
-<p>Mode & Produits en ligne</p>
+<p>Mode • Style • Élégance</p>
 
 </header>
 
+
 <h2>👕 Nos Produits</h2>
+
 
 <div class="products">
 
+
 <div class="product">
 
-<img src="images/produit1.jpg">
+<img
+src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+alt="Vêtement">
 
 <div class="info">
 
-<h3>T-Shirt Premium</h3>
+<h3>👕 T-Shirt Premium</h3>
 
-<p>T-shirt moderne et confortable.</p>
+<p>
+T-shirt moderne et confortable.
+</p>
 
 <div class="price">
 25 000 FBu
 </div>
 
-<a href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20un%20T-Shirt"
+<a
+href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20un%20T-Shirt"
 class="order">
+
 🛒 Commander
+
 </a>
 
 </div>
+
 </div>
+
 
 
 <div class="product">
 
-<img src="images/produit2.jpg">
+<img
+src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=85"
+alt="Chaussures">
 
 <div class="info">
 
-<h3>Chaussures</h3>
+<h3>👟 Chaussures</h3>
 
-<p>Chaussures modernes pour homme.</p>
+<p>
+Chaussures modernes et élégantes.
+</p>
 
 <div class="price">
 60 000 FBu
 </div>
 
-<a href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20des%20Chaussures"
+<a
+href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20des%20Chaussures"
 class="order">
+
 🛒 Commander
+
 </a>
 
 </div>
+
 </div>
+
 
 
 <div class="product">
 
-<img src="images/produit3.jpg">
+<img
+src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85"
+alt="Mode">
 
 <div class="info">
 
-<h3>Veste</h3>
+<h3>🧥 Veste</h3>
 
-<p>Veste élégante et moderne.</p>
+<p>
+Veste élégante pour toutes occasions.
+</p>
 
 <div class="price">
 80 000 FBu
 </div>
 
-<a href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20une%20Veste"
+<a
+href="https://wa.me/257XXXXXXXX?text=Bonjour,%20je%20voudrais%20commander%20une%20Veste"
 class="order">
+
 🛒 Commander
+
 </a>
 
 </div>
-</div>
 
 </div>
+
+
+</div>
+
 
 <a href="index.html" class="home">
+
 🏠 Retour à l'accueil
+
 </a>
+
 
 </div>
 
 </body>
+
 </html>
