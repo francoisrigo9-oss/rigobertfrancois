@@ -1,18 +1,12 @@
 {
-  "name": "Rigobert Francois - Portfolio",
-  "short_name": "Rigobert Portfolio",
-  "description": "Portfolio professionnel de Rigobert Francois",
-  "start_url": "./index.html",
+  "name": "Rigobert Francois",
+  "short_name": "Rigobert",
+  "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#f4f6f9",
+  "background_color": "#ffffff",
   "theme_color": "#0366d6",
   "orientation": "portrait",
   "icons": [
-    {
-      "src": "francois.jpg",
-      "sizes": "192x192",
-      "type": "image/jpeg"
-    },
     {
       "src": "francois.jpg",
       "sizes": "512x512",
