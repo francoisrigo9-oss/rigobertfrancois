@@ -1,735 +1,264 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<title>TEKNO | Développeur Web & Mobile</title>
 
-<title>TEKNO | Football Shop</title>
-
-<meta name="theme-color"
-content="#111111">
+<meta name="theme-color" content="#0366d6">
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-    background:
-    linear-gradient(
-        135deg,
-        #e9eef5,
-        #ffffff
-    );
-
-    color:#222;
-
-    min-height:100vh;
-
-    padding:15px;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#eaf2ff,#f8fafc);
+padding:20px 15px;
+color:#333;
 }
-
-
-/* =========================
-   CONTAINER
-========================= */
 
 .container{
-
-    width:100%;
-
-    max-width:650px;
-
-    margin:auto;
-
-    background:#fff;
-
-    border-radius:25px;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 15px 40px
-    rgba(0,0,0,.18);
+max-width:600px;
+margin:auto;
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
-
-
-/* =========================
-   PROFIL / HERO
-========================= */
 
 .profile{
+min-height:370px;
+padding:40px 20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
 
-    min-height:450px;
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.70)),
+url("francois.jpg");
 
-    padding:45px 25px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    position:relative;
-
-    color:white;
-
-    background-image:
-
-    linear-gradient(
-        rgba(0,0,0,.35),
-        rgba(0,0,0,.78)
-    ),
-
-    url("francois.jpg");
-
-    background-size:cover;
-
-    background-position:center;
+background-size:cover;
+background-position:center;
 }
-
-
-/* LOGO TEKNO */
-
-.logo{
-
-    position:absolute;
-
-    top:20px;
-
-    left:25px;
-
-    font-size:28px;
-
-    font-weight:900;
-
-    letter-spacing:5px;
-
-    color:white;
-
-    text-shadow:
-    0 3px 10px #000;
-}
-
-
-/* PHOTO */
 
 .profile img{
-
-    width:145px;
-
-    height:145px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:5px solid white;
-
-    box-shadow:
-    0 8px 30px
-    rgba(0,0,0,.55);
-
-    margin-bottom:20px;
+width:135px;
+height:135px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 8px 30px rgba(0,0,0,.5);
+margin-bottom:18px;
 }
-
-
-/* NOM */
 
 .profile h1{
-
-    font-size:30px;
-
-    font-weight:900;
-
-    margin-bottom:10px;
-
-    text-shadow:
-    0 3px 10px #000;
+color:white;
+font-size:28px;
+margin-bottom:8px;
+text-shadow:0 2px 8px black;
 }
-
-
-/* DESCRIPTION */
 
 .profile p{
-
-    font-size:17px;
-
-    margin:5px;
-
-    text-shadow:
-    0 2px 7px #000;
+color:white;
+font-size:16px;
 }
-
-
-/* =========================
-   CONTENU
-========================= */
 
 .content{
-
-    padding:25px;
+padding:25px;
 }
-
-
-/* =========================
-   TITRE
-========================= */
 
 .title{
-
-    text-align:center;
-
-    font-size:16px;
-
-    font-weight:bold;
-
-    color:#777;
-
-    margin-bottom:18px;
+text-align:center;
+font-weight:bold;
+color:#777;
+margin-bottom:15px;
 }
 
-
-/* =========================
-   BOUTIQUE
-========================= */
-
-.shop-button{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    width:100%;
-
-    min-height:130px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #111,
-        #333
-    );
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:18px;
-
-    font-weight:bold;
-
-    box-shadow:
-    0 8px 20px
-    rgba(0,0,0,.20);
-
-    transition:.3s;
+.apps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
 }
 
-.shop-button:hover{
-
-    transform:
-    translateY(-5px);
-
-    box-shadow:
-    0 14px 30px
-    rgba(0,0,0,.30);
+.apps a{
+min-height:90px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+text-decoration:none;
+border-radius:15px;
+font-weight:bold;
+transition:.3s;
 }
 
-.shop-icon{
-
-    font-size:45px;
-
-    margin-bottom:8px;
+.apps a:hover{
+transform:translateY(-5px);
 }
 
-.shop-name{
-
-    font-size:22px;
-
-    letter-spacing:2px;
+.restaurant{
+background:linear-gradient(135deg,#d62828,#ff6b6b);
 }
 
-.shop-description{
-
-    font-size:13px;
-
-    margin-top:6px;
-
-    color:#ddd;
+.boutique{
+background:linear-gradient(135deg,#e91e63,#9c27b0);
 }
 
+.medical{
+background:linear-gradient(135deg,#00a896,#028090);
+}
 
-/* =========================
-   WHATSAPP
-========================= */
+.btn{
+display:block;
+text-align:center;
+padding:16px;
+margin-top:15px;
+border-radius:12px;
+background:#0366d6;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
 .whatsapp{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    width:100%;
-
-    min-height:58px;
-
-    margin-top:18px;
-
-    padding:15px;
-
-    border-radius:14px;
-
-    background:#25D366;
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:16px;
-
-    font-weight:bold;
-
-    box-shadow:
-    0 6px 18px
-    rgba(37,211,102,.30);
-
-    transition:.3s;
+background:#25d366;
 }
-
-.whatsapp:hover{
-
-    background:#128C7E;
-
-    transform:
-    translateY(-3px);
-}
-
-
-/* =========================
-   PRESENTATION
-========================= */
 
 .section{
-
-    margin-top:30px;
-
-    padding-top:20px;
-
-    border-top:
-    1px solid #ddd;
+margin-top:30px;
 }
 
 .section h2{
-
-    font-size:21px;
-
-    margin-bottom:12px;
-
-    color:#111;
+font-size:20px;
+border-bottom:2px solid #0366d6;
+padding-bottom:8px;
+margin-bottom:15px;
 }
-
-.section p{
-
-    color:#666;
-
-    line-height:1.6;
-
-    font-size:14px;
-}
-
-
-/* =========================
-   INFORMATIONS
-========================= */
-
-.info{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:10px;
-
-    margin-top:20px;
-}
-
-.info-box{
-
-    background:#f5f6f8;
-
-    padding:15px 8px;
-
-    text-align:center;
-
-    border-radius:12px;
-}
-
-.info-box strong{
-
-    display:block;
-
-    font-size:20px;
-
-    color:#111;
-}
-
-.info-box span{
-
-    font-size:11px;
-
-    color:#777;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
 
 .footer{
-
-    text-align:center;
-
-    font-size:12px;
-
-    color:#999;
-
-    margin-top:30px;
-
-    padding-top:20px;
-
-    border-top:
-    1px solid #ddd;
-
-    line-height:1.8;
+text-align:center;
+font-size:12px;
+color:#999;
+margin-top:30px;
+padding-top:20px;
+border-top:1px solid #ddd;
 }
-
-
-/* =========================
-   MOBILE
-========================= */
 
 @media(max-width:500px){
 
-    body{
-        padding:8px;
-    }
-
-    .profile{
-        min-height:400px;
-    }
-
-    .profile img{
-
-        width:120px;
-
-        height:120px;
-    }
-
-    .profile h1{
-
-        font-size:24px;
-    }
-
-    .logo{
-
-        font-size:22px;
-
-        left:18px;
-    }
-
-    .content{
-
-        padding:18px;
-    }
-
-    .info{
-
-        grid-template-columns:
-        1fr;
-    }
+.apps{
+grid-template-columns:1fr;
+}
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
 <div class="container">
-
-
-<!-- =========================
-     PROFIL
-========================= -->
 
 <header class="profile">
 
+<img src="francois.jpg" alt="Rigobert Francois">
 
-<div class="logo">
-TEKNO
-</div>
+<h1>RIGOBERT FRANCOIS</h1>
 
+<p>Développeur Web & Mobile</p>
 
-<img
-src="francois.jpg"
-alt="Photo de Rigobert Francois"
->
-
-
-<h1>
-RIGOBERT FRANCOIS
-</h1>
-
-
-<p>
-Développeur Web & Mobile
-</p>
-
-
-<p>
-🌍 Bujumbura
-</p>
-
+<p>Bujumbura</p>
 
 </header>
 
 
-
-<!-- =========================
-     CONTENU
-========================= -->
-
-<main class="content">
-
+<div class="content">
 
 <div class="title">
-
-⚽ BIENVENUE CHEZ TEKNO
-
+📂 MES 3 APPLICATIONS
 </div>
 
 
-<!-- =========================
-     BOUTIQUE
-========================= -->
+<div class="apps">
 
-<a
-href="boutique.html"
-class="shop-button"
->
+<a href="restaurant.html" class="restaurant">
 
-<div class="shop-icon">
-⚽
-</div>
+🍽️
 
-
-<div class="shop-name">
-TEKNO FOOTBALL SHOP
-</div>
-
-
-<div class="shop-description">
-Maillots • Crampons • Équipements
-</div>
+<span>Restaurant</span>
 
 </a>
 
 
+<a href="boutique.html" class="boutique">
 
-<!-- =========================
-     WHATSAPP
-========================= -->
+🛍️
 
-<a
-href="https://wa.me/243971984160?text=Bonjour%20TEKNO%2C%20je%20voudrais%20voir%20vos%20produits."
-class="whatsapp"
-target="_blank"
-rel="noopener noreferrer"
->
-
-💬 Contacter TEKNO sur WhatsApp
+<span>Boutique</span>
 
 </a>
 
 
+<a href="medical.html" class="medical">
 
-<!-- =========================
-     PRESENTATION
-========================= -->
+🏥
 
-<section class="section">
-
-<h2>
-🔥 TEKNO Football Shop
-</h2>
-
-
-<p>
-
-Bienvenue sur <strong>TEKNO</strong>,
-ta boutique de football.
-
-Découvrez des maillots de clubs,
-des maillots de sélections nationales
-et des crampons Nike, adidas et
-New Balance.
-
-</p>
-
-</section>
-
-
-
-<!-- =========================
-     STATISTIQUES
-========================= -->
-
-<div class="info">
-
-
-<div class="info-box">
-
-<strong>
-100+
-</strong>
-
-<span>
-Maillots
-</span>
-
-</div>
-
-
-<div class="info-box">
-
-<strong>
-20+
-</strong>
-
-<span>
-Crampons
-</span>
-
-</div>
-
-
-<div class="info-box">
-
-<strong>
-🌍
-</strong>
-
-<span>
-Monde entier
-</span>
-
-</div>
-
-</div>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="section">
-
-<h2>
-📞 Contact
-</h2>
-
-
-<p>
-
-WhatsApp :
-<strong>
-+243 971 984 160
-</strong>
-
-</p>
-
-
-<a
-href="https://wa.me/243971984160"
-class="whatsapp"
-target="_blank"
-rel="noopener noreferrer"
->
-
-📱 Ouvrir WhatsApp
+<span>Centre médical</span>
 
 </a>
 
-</section>
+</div>
 
 
+<a href="https://wa.me/243971984160"
+class="btn whatsapp"
+target="_blank">
 
-<!-- =========================
-     FOOTER
-========================= -->
+💬 Discuter sur WhatsApp
+
+</a>
+
+
+<div class="section">
+
+<h2>👨‍💻 Mon Portfolio</h2>
+
+<a href="competences.html" class="btn">
+
+✨ Mon Parcours & Compétences
+
+</a>
+
+
+<a href="actualites.html" class="btn">
+
+📰 Actualités & Blog Technologie
+
+</a>
+
+</div>
+
 
 <footer class="footer">
 
-<p>
-© 2026 TEKNO Football Shop
-</p>
+<p>© 2026 Rigobert Francois</p>
 
-<p>
-RIGOBERT FRANCOIS
-</p>
-
-<p>
-Développeur Web & Mobile
-</p>
+<p>Développeur Web & Mobile</p>
 
 </footer>
 
-
-</main>
+</div>
 
 </div>
 
-
 </body>
-
 </html>
-```
