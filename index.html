@@ -1,419 +1,487 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TEKNO Football Shop</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>TEKNO | Football Shop</title>
+
+<meta name="theme-color"
+content="#111111">
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, sans-serif;
-background:#f1f3f6;
-color:#222;
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #e9eef5,
+        #ffffff
+    );
+
+    color:#222;
+
+    min-height:100vh;
+
+    padding:15px;
 }
 
-/* ================= HEADER ================= */
 
-header{
-position:sticky;
-top:0;
-z-index:1000;
+/* =========================
+   CONTAINER
+========================= */
 
-background:#050505;
-color:white;
+.container{
 
-padding:14px 5%;
+    width:100%;
 
-display:flex;
-align-items:center;
-gap:20px;
+    max-width:650px;
 
-box-shadow:0 3px 15px rgba(0,0,0,.3);
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.18);
 }
 
-.logo{
-font-size:28px;
-font-weight:900;
-letter-spacing:4px;
+
+/* =========================
+   PROFIL / HERO
+========================= */
+
+.profile{
+
+    min-height:450px;
+
+    padding:45px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    color:white;
+
+    background-image:
+
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.78)
+    ),
+
+    url("francois.jpg");
+
+    background-size:cover;
+
+    background-position:center;
 }
 
-.back{
-color:white;
-text-decoration:none;
-font-size:25px;
-}
 
-.search{
-flex:1;
-}
-
-.search input{
-width:100%;
-padding:13px 20px;
-border:none;
-border-radius:30px;
-outline:none;
-font-size:15px;
-}
-
-.cart{
-font-weight:bold;
-white-space:nowrap;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-
-max-width:1400px;
-
-margin:20px auto;
-
-min-height:300px;
-
-border-radius:22px;
-
-padding:40px;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-color:white;
-
-background:
-
-linear-gradient(
-90deg,
-rgba(0,0,0,.8),
-rgba(0,0,0,.35)
-),
-
-url("francois.jpg");
-
-background-size:cover;
-background-position:center;
-
-}
-
-.hero h1{
-font-size:45px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:19px;
-margin:5px 0;
-}
-
-/* ================= FILTRES ================= */
-
-.filters{
-
-max-width:1400px;
-
-margin:20px auto;
-
-padding:0 15px;
-
-display:flex;
-
-gap:10px;
-
-flex-wrap:wrap;
-
-}
-
-.filters button{
-
-border:none;
-
-padding:12px 20px;
-
-border-radius:25px;
-
-background:white;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-.filters button.active{
-
-background:#111;
-
-color:white;
-
-}
-
-/* ================= COMPTEUR ================= */
-
-.count{
-
-text-align:center;
-
-color:#666;
-
-margin:20px;
-
-font-weight:bold;
-
-}
-
-/* ================= PRODUITS ================= */
-
-.products{
-
-max-width:1400px;
-
-margin:auto;
-
-padding:10px 15px 50px;
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fill,minmax(200px,1fr));
-
-gap:18px;
-
-}
-
-.card{
-
-background:white;
-
-border-radius:16px;
-
-overflow:hidden;
-
-box-shadow:
-0 4px 15px rgba(0,0,0,.10);
-
-transition:.25s;
-
-}
-
-.card:hover{
-
-transform:translateY(-6px);
-
-box-shadow:
-0 10px 25px rgba(0,0,0,.18);
-
-}
-
-.card img{
-
-width:100%;
-
-height:230px;
-
-object-fit:cover;
-
-display:block;
-
-background:#eee;
-
-}
-
-.info{
-
-padding:14px;
-
-}
-
-.category{
-
-font-size:11px;
-
-color:#777;
-
-text-transform:uppercase;
-
-font-weight:bold;
-
-}
-
-.name{
-
-font-weight:bold;
-
-font-size:16px;
-
-margin:7px 0;
-
-line-height:1.3;
-
-}
-
-.country{
-
-font-size:13px;
-
-color:#666;
-
-margin-bottom:7px;
-
-}
-
-.price{
-
-font-size:20px;
-
-font-weight:900;
-
-color:#111;
-
-margin:8px 0;
-
-}
-
-.buy{
-
-width:100%;
-
-border:none;
-
-background:#1769ff;
-
-color:white;
-
-padding:12px;
-
-border-radius:9px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-.buy:hover{
-
-background:#004dcc;
-
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-
-background:#050505;
-
-color:white;
-
-text-align:center;
-
-padding:30px;
-
-line-height:2;
-
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:600px){
-
-header{
-
-gap:8px;
-
-padding:10px;
-
-}
+/* LOGO TEKNO */
 
 .logo{
 
-font-size:20px;
+    position:absolute;
 
+    top:20px;
+
+    left:25px;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    letter-spacing:5px;
+
+    color:white;
+
+    text-shadow:
+    0 3px 10px #000;
 }
 
-.search input{
 
-padding:10px;
+/* PHOTO */
 
-font-size:12px;
+.profile img{
 
+    width:145px;
+
+    height:145px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid white;
+
+    box-shadow:
+    0 8px 30px
+    rgba(0,0,0,.55);
+
+    margin-bottom:20px;
 }
 
-.hero{
 
-margin:10px;
+/* NOM */
 
-min-height:250px;
+.profile h1{
 
-padding:25px;
+    font-size:30px;
 
+    font-weight:900;
+
+    margin-bottom:10px;
+
+    text-shadow:
+    0 3px 10px #000;
 }
 
-.hero h1{
 
-font-size:30px;
+/* DESCRIPTION */
 
+.profile p{
+
+    font-size:17px;
+
+    margin:5px;
+
+    text-shadow:
+    0 2px 7px #000;
 }
 
-.hero p{
 
-font-size:15px;
+/* =========================
+   CONTENU
+========================= */
 
+.content{
+
+    padding:25px;
 }
 
-.products{
 
-grid-template-columns:
-repeat(2,1fr);
+/* =========================
+   TITRE
+========================= */
 
-gap:10px;
+.title{
 
-padding:10px;
+    text-align:center;
 
+    font-size:16px;
+
+    font-weight:bold;
+
+    color:#777;
+
+    margin-bottom:18px;
 }
 
-.card img{
 
-height:180px;
+/* =========================
+   BOUTIQUE
+========================= */
 
+.shop-button{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    min-height:130px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #111,
+        #333
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 8px 20px
+    rgba(0,0,0,.20);
+
+    transition:.3s;
 }
+
+.shop-button:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 14px 30px
+    rgba(0,0,0,.30);
+}
+
+.shop-icon{
+
+    font-size:45px;
+
+    margin-bottom:8px;
+}
+
+.shop-name{
+
+    font-size:22px;
+
+    letter-spacing:2px;
+}
+
+.shop-description{
+
+    font-size:13px;
+
+    margin-top:6px;
+
+    color:#ddd;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    min-height:58px;
+
+    margin-top:18px;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    background:#25D366;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 6px 18px
+    rgba(37,211,102,.30);
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+
+    background:#128C7E;
+
+    transform:
+    translateY(-3px);
+}
+
+
+/* =========================
+   PRESENTATION
+========================= */
+
+.section{
+
+    margin-top:30px;
+
+    padding-top:20px;
+
+    border-top:
+    1px solid #ddd;
+}
+
+.section h2{
+
+    font-size:21px;
+
+    margin-bottom:12px;
+
+    color:#111;
+}
+
+.section p{
+
+    color:#666;
+
+    line-height:1.6;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   INFORMATIONS
+========================= */
 
 .info{
 
-padding:10px;
+    display:grid;
 
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:10px;
+
+    margin-top:20px;
 }
 
-.name{
+.info-box{
 
-font-size:14px;
+    background:#f5f6f8;
 
+    padding:15px 8px;
+
+    text-align:center;
+
+    border-radius:12px;
 }
 
-.price{
+.info-box strong{
 
-font-size:17px;
+    display:block;
 
+    font-size:20px;
+
+    color:#111;
 }
 
-.buy{
+.info-box span{
 
-font-size:12px;
+    font-size:11px;
 
-padding:10px;
-
+    color:#777;
 }
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    font-size:12px;
+
+    color:#999;
+
+    margin-top:30px;
+
+    padding-top:20px;
+
+    border-top:
+    1px solid #ddd;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:500px){
+
+    body{
+        padding:8px;
+    }
+
+    .profile{
+        min-height:400px;
+    }
+
+    .profile img{
+
+        width:120px;
+
+        height:120px;
+    }
+
+    .profile h1{
+
+        font-size:24px;
+    }
+
+    .logo{
+
+        font-size:22px;
+
+        left:18px;
+    }
+
+    .content{
+
+        padding:18px;
+    }
+
+    .info{
+
+        grid-template-columns:
+        1fr;
+    }
 
 }
 
@@ -421,626 +489,247 @@ padding:10px;
 
 </head>
 
+
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<div class="container">
 
-<header>
 
-<a href="index.html" class="back">
-←
-</a>
+<!-- =========================
+     PROFIL
+========================= -->
+
+<header class="profile">
+
 
 <div class="logo">
 TEKNO
 </div>
 
-<div class="search">
 
-<input
-type="search"
-id="search"
-placeholder="🔍 Rechercher un club, pays ou crampon..."
+<img
+src="francois.jpg"
+alt="Photo de Rigobert Francois"
 >
 
-</div>
 
-<div class="cart">
+<h1>
+RIGOBERT FRANCOIS
+</h1>
 
-🛒 <span id="cart">0</span>
 
-</div>
+<p>
+Développeur Web & Mobile
+</p>
+
+
+<p>
+🌍 Bujumbura
+</p>
+
 
 </header>
 
 
-<!-- ================= HERO ================= -->
 
-<section class="hero">
+<!-- =========================
+     CONTENU
+========================= -->
 
-<h1>
+<main class="content">
+
+
+<div class="title">
+
+⚽ BIENVENUE CHEZ TEKNO
+
+</div>
+
+
+<!-- =========================
+     BOUTIQUE
+========================= -->
+
+<a
+href="boutique.html"
+class="shop-button"
+>
+
+<div class="shop-icon">
+⚽
+</div>
+
+
+<div class="shop-name">
 TEKNO FOOTBALL SHOP
-</h1>
-
-<p>
-👕 100 maillots de clubs et sélections
-</p>
-
-<p>
-👟 20 modèles de crampons
-</p>
-
-<p>
-🌍 Football du monde entier
-</p>
-
-</section>
-
-
-<!-- ================= FILTRES ================= -->
-
-<div class="filters">
-
-<button
-class="active"
-onclick="filterProducts('all',this)"
->
-🌍 Tous
-</button>
-
-<button
-onclick="filterProducts('maillot',this)"
->
-👕 Maillots
-</button>
-
-<button
-onclick="filterProducts('crampon',this)"
->
-👟 Crampons
-</button>
-
 </div>
 
 
-<div class="count" id="count">
+<div class="shop-description">
+Maillots • Crampons • Équipements
 </div>
 
+</a>
 
-<!-- ================= PRODUITS ================= -->
 
-<section
-class="products"
-id="products"
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+href="https://wa.me/243971984160?text=Bonjour%20TEKNO%2C%20je%20voudrais%20voir%20vos%20produits."
+class="whatsapp"
+target="_blank"
+rel="noopener noreferrer"
 >
-</section>
+
+💬 Contacter TEKNO sur WhatsApp
+
+</a>
 
 
-<!-- ================= FOOTER ================= -->
 
-<footer>
+<!-- =========================
+     PRESENTATION
+========================= -->
+
+<section class="section">
 
 <h2>
-TEKNO
+🔥 TEKNO Football Shop
 </h2>
 
+
 <p>
-Football Shop
+
+Bienvenue sur <strong>TEKNO</strong>,
+ta boutique de football.
+
+Découvrez des maillots de clubs,
+des maillots de sélections nationales
+et des crampons Nike, adidas et
+New Balance.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================
+     STATISTIQUES
+========================= -->
+
+<div class="info">
+
+
+<div class="info-box">
+
+<strong>
+100+
+</strong>
+
+<span>
+Maillots
+</span>
+
+</div>
+
+
+<div class="info-box">
+
+<strong>
+20+
+</strong>
+
+<span>
+Crampons
+</span>
+
+</div>
+
+
+<div class="info-box">
+
+<strong>
+🌍
+</strong>
+
+<span>
+Monde entier
+</span>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section">
+
+<h2>
+📞 Contact
+</h2>
+
+
+<p>
+
+WhatsApp :
+<strong>
++243 971 984 160
+</strong>
+
+</p>
+
+
+<a
+href="https://wa.me/243971984160"
+class="whatsapp"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+📱 Ouvrir WhatsApp
+
+</a>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+<p>
+© 2026 TEKNO Football Shop
 </p>
 
 <p>
-📞 +243 971 984 160
+RIGOBERT FRANCOIS
 </p>
 
 <p>
-© 2026 TEKNO
+Développeur Web & Mobile
 </p>
 
 </footer>
 
 
-<script>
-
-/* =====================================================
-   100 MAILLOTS
-===================================================== */
-
-const maillots = [
-
-["FC Barcelona","Espagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Real Madrid","Espagne","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Manchester United","Angleterre","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Manchester City","Angleterre","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Liverpool FC","Angleterre","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Arsenal FC","Angleterre","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Chelsea FC","Angleterre","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Tottenham","Angleterre","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["PSG","France","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Olympique Marseille","France","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Bayern Munich","Allemagne","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Borussia Dortmund","Allemagne","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Juventus","Italie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["AC Milan","Italie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Inter Milan","Italie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["AS Roma","Italie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Napoli","Italie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Ajax Amsterdam","Pays-Bas","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["PSV Eindhoven","Pays-Bas","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Benfica","Portugal","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["FC Porto","Portugal","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Sporting CP","Portugal","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Galatasaray","Turquie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Fenerbahçe","Turquie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Celtic","Écosse","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["River Plate","Argentine","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Boca Juniors","Argentine","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Flamengo","Brésil","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Palmeiras","Brésil","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Corinthians","Brésil","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Santos","Brésil","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Al Hilal","Arabie Saoudite","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Al Nassr","Arabie Saoudite","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Wydad Casablanca","Maroc","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Raja Casablanca","Maroc","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["TP Mazembe","RDC","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["AS Vita Club","RDC","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Young Africans","Tanzanie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Simba SC","Tanzanie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Mamelodi Sundowns","Afrique du Sud","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Rangers","Écosse","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Portland Timbers","USA","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["LA Galaxy","USA","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Inter Miami","USA","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Club América","Mexique","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Monterrey","Mexique","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Urawa Reds","Japon","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Kashima Antlers","Japon","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Jeonbuk","Corée du Sud","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Al Ahly","Égypte","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Zamalek","Égypte","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Espérance Tunis","Tunisie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Club Africain","Tunisie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["USM Alger","Algérie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["JS Kabylie","Algérie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Raja","Maroc","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["ASEC Mimosas","Côte d'Ivoire","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Hearts of Oak","Ghana","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Asante Kotoko","Ghana","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Enyimba","Nigeria","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Kano Pillars","Nigeria","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Orlando Pirates","Afrique du Sud","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Kaizer Chiefs","Afrique du Sud","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["FC Copenhagen","Danemark","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["PSV","Pays-Bas","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Feyenoord","Pays-Bas","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Anderlecht","Belgique","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Club Brugge","Belgique","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["RB Leipzig","Allemagne","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Bayer Leverkusen","Allemagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Monaco","France","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Lyon","France","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Lille","France","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Sevilla","Espagne","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Atletico Madrid","Espagne","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Athletic Bilbao","Espagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Valencia","Espagne","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Uruguay","Uruguay","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Argentine","Argentine","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Brésil","Brésil","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["France","France","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Espagne","Espagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Portugal","Portugal","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Angleterre","Angleterre","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Allemagne","Allemagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Italie","Italie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Belgique","Belgique","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Croatie","Croatie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Maroc","Maroc","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Sénégal","Sénégal","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Nigeria","Nigeria","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Cameroun","Cameroun","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Ghana","Ghana","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Côte d'Ivoire","Côte d'Ivoire","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["RDC","RDC","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Burundi","Burundi","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Japon","Japon","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Corée du Sud","Corée du Sud","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Australie","Australie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["USA","États-Unis","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Mexique","Mexique","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
-
-["Colombie","Colombie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
-
-["Chili","Chili","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
-
-["Paraguay","Paraguay","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"]
-
-];
-
-
-/* =====================================================
-   20 CRAMPONS
-===================================================== */
-
-const crampons = [
-
-["Nike Mercurial Vapor 16","Nike","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["Nike Mercurial Superfly 10","Nike","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["Nike Phantom GX 2","Nike","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["Nike Tiempo Legend 10","Nike","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["Nike Mercurial Academy","Nike","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["Nike Phantom GX Academy","Nike","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["adidas Predator Elite","adidas","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["adidas Predator League","adidas","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["adidas F50 Elite","adidas","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["adidas F50 League","adidas","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["adidas Copa Pure","adidas","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["adidas X Crazyfast","adidas","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["New Balance Furon v8","New Balance","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["New Balance Tekela v4","New Balance","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["New Balance 442","New Balance","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["New Balance Furon Academy","New Balance","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["New Balance Tekela Academy","New Balance","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["Nike Tiempo Academy","Nike","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
-
-["adidas Copa Pure 2","adidas","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
-
-["New Balance 442 Pro","New Balance","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"]
-
-];
-
-
-/* =====================================================
-   CREATION DU CATALOGUE
-===================================================== */
-
-let produits=[];
-
-
-/* AJOUT DES MAILLOTS */
-
-maillots.forEach(function(item){
-
-produits.push({
-
-type:"maillot",
-
-nom:item[0],
-
-pays:item[1],
-
-image:item[2],
-
-prix:45
-
-});
-
-});
-
-
-/* AJOUT DES CRAMPONS */
-
-crampons.forEach(function(item){
-
-produits.push({
-
-type:"crampon",
-
-nom:item[0],
-
-pays:item[1],
-
-image:item[2],
-
-prix:95
-
-});
-
-});
-
-
-/* =====================================================
-   AFFICHAGE
-===================================================== */
-
-const productsContainer =
-document.getElementById("products");
-
-const search =
-document.getElementById("search");
-
-const count =
-document.getElementById("count");
-
-let filtre="all";
-
-let panier=0;
-
-
-function afficher(){
-
-let recherche =
-search.value.toLowerCase();
-
-
-let resultat=produits.filter(function(p){
-
-let correspondType =
-filtre==="all" ||
-p.type===filtre;
-
-
-let correspondRecherche =
-p.nom.toLowerCase().includes(recherche) ||
-p.pays.toLowerCase().includes(recherche);
-
-
-return correspondType &&
-correspondRecherche;
-
-});
-
-
-count.innerHTML =
-resultat.length +
-" produit(s) disponible(s)";
-
-
-productsContainer.innerHTML="";
-
-
-resultat.forEach(function(p){
-
-let card=document.createElement("article");
-
-card.className="card";
-
-
-card.innerHTML=`
-
-<img
-src="${p.image}"
-alt="${p.nom}"
-loading="lazy"
->
-
-<div class="info">
-
-<div class="category">
-
-${p.type==="maillot"
-? "👕 Maillot"
-: "👟 Crampon"}
+</main>
 
 </div>
 
-<div class="name">
-
-${p.nom}
-
-</div>
-
-<div class="country">
-
-🌍 ${p.pays}
-
-</div>
-
-<div class="price">
-
-${p.prix} $
-
-</div>
-
-<button
-class="buy"
-onclick="commander('${p.nom}')"
->
-
-🛒 Commander
-
-</button>
-
-</div>
-
-`;
-
-
-productsContainer.appendChild(card);
-
-});
-
-}
-
-
-/* =====================================================
-   FILTRE
-===================================================== */
-
-function filterProducts(type,button){
-
-filtre=type;
-
-
-document
-.querySelectorAll(".filters button")
-.forEach(function(btn){
-
-btn.classList.remove("active");
-
-});
-
-
-button.classList.add("active");
-
-
-afficher();
-
-}
-
-
-/* =====================================================
-   WHATSAPP
-===================================================== */
-
-function commander(nom){
-
-panier++;
-
-document.getElementById("cart").innerText=panier;
-
-
-let message=
-"Bonjour TEKNO, je voudrais commander : "
-+
-nom;
-
-
-let url=
-"https://wa.me/243971984160?text="
-+
-encodeURIComponent(message);
-
-
-window.open(url,"_blank");
-
-}
-
-
-/* =====================================================
-   RECHERCHE
-===================================================== */
-
-search.addEventListener(
-"input",
-afficher
-);
-
-
-/* AFFICHAGE INITIAL */
-
-afficher();
-
-</script>
 
 </body>
 
 </html>
+```
