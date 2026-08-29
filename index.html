@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rigobert Francois | Développeur Web & Mobile</title>
-
-<meta name="theme-color" content="#0366d6">
+<title>TEKNO Football Shop</title>
 
 <style>
 
@@ -18,247 +17,1030 @@ padding:0;
 
 body{
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#eaf2ff,#f8fafc);
-padding:20px 15px;
-color:#333;
+background:#f1f3f6;
+color:#222;
 }
 
-.container{
-max-width:600px;
-margin:auto;
-background:white;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 15px 40px rgba(0,0,0,.15);
-}
+/* ================= HEADER ================= */
 
-.profile{
-min-height:370px;
-padding:40px 20px;
+header{
+position:sticky;
+top:0;
+z-index:1000;
+
+background:#050505;
+color:white;
+
+padding:14px 5%;
+
 display:flex;
-flex-direction:column;
 align-items:center;
-justify-content:center;
-text-align:center;
+gap:20px;
 
-background-image:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.70)),
+box-shadow:0 3px 15px rgba(0,0,0,.3);
+}
+
+.logo{
+font-size:28px;
+font-weight:900;
+letter-spacing:4px;
+}
+
+.back{
+color:white;
+text-decoration:none;
+font-size:25px;
+}
+
+.search{
+flex:1;
+}
+
+.search input{
+width:100%;
+padding:13px 20px;
+border:none;
+border-radius:30px;
+outline:none;
+font-size:15px;
+}
+
+.cart{
+font-weight:bold;
+white-space:nowrap;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+max-width:1400px;
+
+margin:20px auto;
+
+min-height:300px;
+
+border-radius:22px;
+
+padding:40px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+color:white;
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.8),
+rgba(0,0,0,.35)
+),
+
 url("francois.jpg");
 
 background-size:cover;
 background-position:center;
+
 }
 
-.profile img{
-width:135px;
-height:135px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid white;
-box-shadow:0 8px 30px rgba(0,0,0,.5);
-margin-bottom:18px;
-}
-
-.profile h1{
-color:white;
-font-size:28px;
-margin-bottom:8px;
-text-shadow:0 2px 8px black;
-}
-
-.profile p{
-color:white;
-font-size:16px;
-}
-
-.content{
-padding:25px;
-}
-
-.title{
-text-align:center;
-font-weight:bold;
-color:#777;
+.hero h1{
+font-size:45px;
 margin-bottom:15px;
 }
 
-.apps{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
+.hero p{
+font-size:19px;
+margin:5px 0;
 }
 
-.apps a{
-min-height:90px;
+/* ================= FILTRES ================= */
+
+.filters{
+
+max-width:1400px;
+
+margin:20px auto;
+
+padding:0 15px;
+
 display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-color:white;
-text-decoration:none;
-border-radius:15px;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+}
+
+.filters button{
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:25px;
+
+background:white;
+
 font-weight:bold;
-transition:.3s;
+
+cursor:pointer;
+
 }
 
-.apps a:hover{
-transform:translateY(-5px);
+.filters button.active{
+
+background:#111;
+
+color:white;
+
 }
 
-.restaurant{
-background:linear-gradient(135deg,#d62828,#ff6b6b);
+/* ================= COMPTEUR ================= */
+
+.count{
+
+text-align:center;
+
+color:#666;
+
+margin:20px;
+
+font-weight:bold;
+
 }
 
-.boutique{
-background:linear-gradient(135deg,#e91e63,#9c27b0);
+/* ================= PRODUITS ================= */
+
+.products{
+
+max-width:1400px;
+
+margin:auto;
+
+padding:10px 15px 50px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fill,minmax(200px,1fr));
+
+gap:18px;
+
 }
 
-.medical{
-background:linear-gradient(135deg,#00a896,#028090);
+.card{
+
+background:white;
+
+border-radius:16px;
+
+overflow:hidden;
+
+box-shadow:
+0 4px 15px rgba(0,0,0,.10);
+
+transition:.25s;
+
 }
 
-.btn{
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.18);
+
+}
+
+.card img{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
 display:block;
-text-align:center;
-padding:16px;
-margin-top:15px;
-border-radius:12px;
-background:#0366d6;
-color:white;
-text-decoration:none;
+
+background:#eee;
+
+}
+
+.info{
+
+padding:14px;
+
+}
+
+.category{
+
+font-size:11px;
+
+color:#777;
+
+text-transform:uppercase;
+
 font-weight:bold;
+
 }
 
-.whatsapp{
-background:#25d366;
+.name{
+
+font-weight:bold;
+
+font-size:16px;
+
+margin:7px 0;
+
+line-height:1.3;
+
 }
 
-.section{
-margin-top:30px;
+.country{
+
+font-size:13px;
+
+color:#666;
+
+margin-bottom:7px;
+
 }
 
-.section h2{
+.price{
+
 font-size:20px;
-border-bottom:2px solid #0366d6;
-padding-bottom:8px;
-margin-bottom:15px;
+
+font-weight:900;
+
+color:#111;
+
+margin:8px 0;
+
 }
 
-.footer{
+.buy{
+
+width:100%;
+
+border:none;
+
+background:#1769ff;
+
+color:white;
+
+padding:12px;
+
+border-radius:9px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+.buy:hover{
+
+background:#004dcc;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#050505;
+
+color:white;
+
 text-align:center;
-font-size:12px;
-color:#999;
-margin-top:30px;
-padding-top:20px;
-border-top:1px solid #ddd;
+
+padding:30px;
+
+line-height:2;
+
 }
 
-@media(max-width:500px){
+/* ================= MOBILE ================= */
 
-.apps{
-grid-template-columns:1fr;
+@media(max-width:600px){
+
+header{
+
+gap:8px;
+
+padding:10px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+}
+
+.search input{
+
+padding:10px;
+
+font-size:12px;
+
+}
+
+.hero{
+
+margin:10px;
+
+min-height:250px;
+
+padding:25px;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+.products{
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:10px;
+
+padding:10px;
+
+}
+
+.card img{
+
+height:180px;
+
+}
+
+.info{
+
+padding:10px;
+
+}
+
+.name{
+
+font-size:14px;
+
+}
+
+.price{
+
+font-size:17px;
+
+}
+
+.buy{
+
+font-size:12px;
+
+padding:10px;
+
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
 
-<header class="profile">
+<!-- ================= HEADER ================= -->
 
-<img src="francois.jpg" alt="Rigobert Francois">
+<header>
 
-<h1>RIGOBERT FRANCOIS</h1>
+<a href="index.html" class="back">
+←
+</a>
 
-<p>Développeur Web & Mobile</p>
+<div class="logo">
+TEKNO
+</div>
 
-<p>Bujumbura</p>
+<div class="search">
+
+<input
+type="search"
+id="search"
+placeholder="🔍 Rechercher un club, pays ou crampon..."
+>
+
+</div>
+
+<div class="cart">
+
+🛒 <span id="cart">0</span>
+
+</div>
 
 </header>
 
 
-<div class="content">
+<!-- ================= HERO ================= -->
 
-<div class="title">
-📂 MES 3 APPLICATIONS
-</div>
+<section class="hero">
 
+<h1>
+TEKNO FOOTBALL SHOP
+</h1>
 
-<div class="apps">
+<p>
+👕 100 maillots de clubs et sélections
+</p>
 
-<a href="restaurant.html" class="restaurant">
+<p>
+👟 20 modèles de crampons
+</p>
 
-🍽️
+<p>
+🌍 Football du monde entier
+</p>
 
-<span>Restaurant</span>
-
-</a>
-
-
-<a href="boutique.html" class="boutique">
-
-🛍️
-
-<span>Boutique</span>
-
-</a>
+</section>
 
 
-<a href="medical.html" class="medical">
+<!-- ================= FILTRES ================= -->
 
-🏥
+<div class="filters">
 
-<span>Centre médical</span>
+<button
+class="active"
+onclick="filterProducts('all',this)"
+>
+🌍 Tous
+</button>
 
-</a>
+<button
+onclick="filterProducts('maillot',this)"
+>
+👕 Maillots
+</button>
 
-</div>
-
-
-<a href="https://wa.me/257XXXXXXXX"
-class="btn whatsapp"
-target="_blank">
-
-💬 Discuter sur WhatsApp
-
-</a>
-
-
-<div class="section">
-
-<h2>👨‍💻 Mon Portfolio</h2>
-
-<a href="competences.html" class="btn">
-
-✨ Mon Parcours & Compétences
-
-</a>
-
-
-<a href="actualites.html" class="btn">
-
-📰 Actualités & Blog Technologie
-
-</a>
+<button
+onclick="filterProducts('crampon',this)"
+>
+👟 Crampons
+</button>
 
 </div>
 
 
-<footer class="footer">
+<div class="count" id="count">
+</div>
 
-<p>© 2026 Rigobert Francois</p>
 
-<p>Développeur Web & Mobile</p>
+<!-- ================= PRODUITS ================= -->
+
+<section
+class="products"
+id="products"
+>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>
+TEKNO
+</h2>
+
+<p>
+Football Shop
+</p>
+
+<p>
+📞 +243 971 984 160
+</p>
+
+<p>
+© 2026 TEKNO
+</p>
 
 </footer>
 
-</div>
+
+<script>
+
+/* =====================================================
+   100 MAILLOTS
+===================================================== */
+
+const maillots = [
+
+["FC Barcelona","Espagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Real Madrid","Espagne","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Manchester United","Angleterre","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Manchester City","Angleterre","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Liverpool FC","Angleterre","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Arsenal FC","Angleterre","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Chelsea FC","Angleterre","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Tottenham","Angleterre","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["PSG","France","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Olympique Marseille","France","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Bayern Munich","Allemagne","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Borussia Dortmund","Allemagne","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Juventus","Italie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["AC Milan","Italie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Inter Milan","Italie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["AS Roma","Italie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Napoli","Italie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Ajax Amsterdam","Pays-Bas","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["PSV Eindhoven","Pays-Bas","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Benfica","Portugal","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["FC Porto","Portugal","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Sporting CP","Portugal","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Galatasaray","Turquie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Fenerbahçe","Turquie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Celtic","Écosse","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["River Plate","Argentine","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Boca Juniors","Argentine","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Flamengo","Brésil","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Palmeiras","Brésil","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Corinthians","Brésil","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Santos","Brésil","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Al Hilal","Arabie Saoudite","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Al Nassr","Arabie Saoudite","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Wydad Casablanca","Maroc","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Raja Casablanca","Maroc","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["TP Mazembe","RDC","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["AS Vita Club","RDC","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Young Africans","Tanzanie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Simba SC","Tanzanie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Mamelodi Sundowns","Afrique du Sud","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Rangers","Écosse","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Portland Timbers","USA","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["LA Galaxy","USA","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Inter Miami","USA","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Club América","Mexique","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Monterrey","Mexique","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Urawa Reds","Japon","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Kashima Antlers","Japon","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Jeonbuk","Corée du Sud","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Al Ahly","Égypte","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Zamalek","Égypte","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Espérance Tunis","Tunisie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Club Africain","Tunisie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["USM Alger","Algérie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["JS Kabylie","Algérie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Raja","Maroc","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["ASEC Mimosas","Côte d'Ivoire","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Hearts of Oak","Ghana","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Asante Kotoko","Ghana","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Enyimba","Nigeria","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Kano Pillars","Nigeria","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Orlando Pirates","Afrique du Sud","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Kaizer Chiefs","Afrique du Sud","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["FC Copenhagen","Danemark","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["PSV","Pays-Bas","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Feyenoord","Pays-Bas","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Anderlecht","Belgique","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Club Brugge","Belgique","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["RB Leipzig","Allemagne","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Bayer Leverkusen","Allemagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Monaco","France","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Lyon","France","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Lille","France","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Sevilla","Espagne","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Atletico Madrid","Espagne","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Athletic Bilbao","Espagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Valencia","Espagne","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Uruguay","Uruguay","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Argentine","Argentine","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Brésil","Brésil","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["France","France","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Espagne","Espagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Portugal","Portugal","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Angleterre","Angleterre","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Allemagne","Allemagne","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Italie","Italie","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Belgique","Belgique","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Croatie","Croatie","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Maroc","Maroc","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Sénégal","Sénégal","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Nigeria","Nigeria","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Cameroun","Cameroun","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Ghana","Ghana","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Côte d'Ivoire","Côte d'Ivoire","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["RDC","RDC","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Burundi","Burundi","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Japon","Japon","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Corée du Sud","Corée du Sud","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Australie","Australie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["USA","États-Unis","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Mexique","Mexique","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"],
+
+["Colombie","Colombie","https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80"],
+
+["Chili","Chili","https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"],
+
+["Paraguay","Paraguay","https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=80"]
+
+];
+
+
+/* =====================================================
+   20 CRAMPONS
+===================================================== */
+
+const crampons = [
+
+["Nike Mercurial Vapor 16","Nike","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["Nike Mercurial Superfly 10","Nike","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["Nike Phantom GX 2","Nike","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["Nike Tiempo Legend 10","Nike","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["Nike Mercurial Academy","Nike","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["Nike Phantom GX Academy","Nike","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["adidas Predator Elite","adidas","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["adidas Predator League","adidas","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["adidas F50 Elite","adidas","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["adidas F50 League","adidas","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["adidas Copa Pure","adidas","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["adidas X Crazyfast","adidas","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["New Balance Furon v8","New Balance","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["New Balance Tekela v4","New Balance","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["New Balance 442","New Balance","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["New Balance Furon Academy","New Balance","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["New Balance Tekela Academy","New Balance","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["Nike Tiempo Academy","Nike","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"],
+
+["adidas Copa Pure 2","adidas","https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=700&q=80"],
+
+["New Balance 442 Pro","New Balance","https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"]
+
+];
+
+
+/* =====================================================
+   CREATION DU CATALOGUE
+===================================================== */
+
+let produits=[];
+
+
+/* AJOUT DES MAILLOTS */
+
+maillots.forEach(function(item){
+
+produits.push({
+
+type:"maillot",
+
+nom:item[0],
+
+pays:item[1],
+
+image:item[2],
+
+prix:45
+
+});
+
+});
+
+
+/* AJOUT DES CRAMPONS */
+
+crampons.forEach(function(item){
+
+produits.push({
+
+type:"crampon",
+
+nom:item[0],
+
+pays:item[1],
+
+image:item[2],
+
+prix:95
+
+});
+
+});
+
+
+/* =====================================================
+   AFFICHAGE
+===================================================== */
+
+const productsContainer =
+document.getElementById("products");
+
+const search =
+document.getElementById("search");
+
+const count =
+document.getElementById("count");
+
+let filtre="all";
+
+let panier=0;
+
+
+function afficher(){
+
+let recherche =
+search.value.toLowerCase();
+
+
+let resultat=produits.filter(function(p){
+
+let correspondType =
+filtre==="all" ||
+p.type===filtre;
+
+
+let correspondRecherche =
+p.nom.toLowerCase().includes(recherche) ||
+p.pays.toLowerCase().includes(recherche);
+
+
+return correspondType &&
+correspondRecherche;
+
+});
+
+
+count.innerHTML =
+resultat.length +
+" produit(s) disponible(s)";
+
+
+productsContainer.innerHTML="";
+
+
+resultat.forEach(function(p){
+
+let card=document.createElement("article");
+
+card.className="card";
+
+
+card.innerHTML=`
+
+<img
+src="${p.image}"
+alt="${p.nom}"
+loading="lazy"
+>
+
+<div class="info">
+
+<div class="category">
+
+${p.type==="maillot"
+? "👕 Maillot"
+: "👟 Crampon"}
 
 </div>
+
+<div class="name">
+
+${p.nom}
+
+</div>
+
+<div class="country">
+
+🌍 ${p.pays}
+
+</div>
+
+<div class="price">
+
+${p.prix} $
+
+</div>
+
+<button
+class="buy"
+onclick="commander('${p.nom}')"
+>
+
+🛒 Commander
+
+</button>
+
+</div>
+
+`;
+
+
+productsContainer.appendChild(card);
+
+});
+
+}
+
+
+/* =====================================================
+   FILTRE
+===================================================== */
+
+function filterProducts(type,button){
+
+filtre=type;
+
+
+document
+.querySelectorAll(".filters button")
+.forEach(function(btn){
+
+btn.classList.remove("active");
+
+});
+
+
+button.classList.add("active");
+
+
+afficher();
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+function commander(nom){
+
+panier++;
+
+document.getElementById("cart").innerText=panier;
+
+
+let message=
+"Bonjour TEKNO, je voudrais commander : "
++
+nom;
+
+
+let url=
+"https://wa.me/243971984160?text="
++
+encodeURIComponent(message);
+
+
+window.open(url,"_blank");
+
+}
+
+
+/* =====================================================
+   RECHERCHE
+===================================================== */
+
+search.addEventListener(
+"input",
+afficher
+);
+
+
+/* AFFICHAGE INITIAL */
+
+afficher();
+
+</script>
 
 </body>
+
 </html>
